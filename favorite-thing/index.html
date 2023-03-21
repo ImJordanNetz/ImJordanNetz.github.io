@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>Advanced Calculus</h1>
+        <h1 style="font-size: 70px;">Advanced Calculus</h1>
         <h2>My Favorite Class This Year</h2>
     </div>
     <div class="content">
@@ -26,7 +26,15 @@
             </ul>
         </div>
         <div class="photos">
-            <a href="https://www.eastsideprep.org/faculty/brandon-smith/" target="_blank"><img src="./images/bsmith.jpg" alt="Brandon Smith"></a>
+            <a href="https://www.eastsideprep.org/faculty/brandon-smith/" target="_blank"><img src="./images/bsmith.jpg" alt="Brandon Smith" id="bsmith"></a>
+            <style>
+                #bsmith{
+                    transition: all 0.2s ease-in-out;
+                }
+                #bsmith:hover{
+                    transform: translateY(5px, 5px)
+                }
+            </style>
         </div>
     </div>
     <div class="desmos">
