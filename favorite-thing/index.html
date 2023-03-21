@@ -7,6 +7,25 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
 
     <title>My Favorite Thing</title>
+    <style>
+        #bsmith{
+            transition: all 0.2s ease-in-out;
+        }
+        #bsmith:hover{
+            transform: translateY(5px, 5px)
+        }
+        .slide-in {
+            position: relative;
+            left: 1000px;
+            animation: slide-in 1s forwards;
+        }
+        
+        @keyframes slide-in {
+            to {
+                left: 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="header">
@@ -27,25 +46,6 @@
         </div>
         <div class="photos">
             <a href="https://www.eastsideprep.org/faculty/brandon-smith/" target="_blank"><img src="./images/bsmith.jpg" alt="Brandon Smith" id="bsmith" class="slide-in"></a>
-            <style>
-                #bsmith{
-                    transition: all 0.2s ease-in-out;
-                }
-                #bsmith:hover{
-                    transform: translateY(5px, 5px)
-                }
-                .slide-in {
-                    position: relative;
-                    left: 1000px;
-                    animation: slide-in 1s forwards;
-                }
-                
-                @keyframes slide-in {
-                    to {
-                        left: 0;
-                    }
-                }
-            </style>
         </div>
     </div>
     <div class="desmos">
