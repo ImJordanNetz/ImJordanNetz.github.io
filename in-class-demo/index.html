@@ -9,10 +9,22 @@
         #red-square {
             width: 300px;
             height: 300px;
-            border: 3px solid red;
+            background-color: teal;
+
+
             position: relative;
-            left: 1500px;
-            animation: slide-in 2s forwards;
+            
+            animation: slide-in 1s forwards ease-in-out, rotate 3s ease-in-out infinite alternate;
+            left: 750px;
+            
+            rotate: 30deg;
+
+        }
+        
+        @keyframes rotate{
+            to{
+                rotate: -30deg;
+            }
         }
 
         @keyframes slide-in {
@@ -21,11 +33,14 @@
             }
         }
 
+
+
     </style>
 </head>
 <body>
-    <div id="red-square">
+    <center><div id="red-square">
 
-    </div>
+    </div></center>
+
 </body>
 </html>
