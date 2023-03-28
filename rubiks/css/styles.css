@@ -50,12 +50,12 @@ body{
     margin-left: 15px;
 }
 
-.gradient {
-    background: linear-gradient(90deg, rgba(255,121,0,1) 0%, rgba(253,47,0,1) 35%, rgba(255,0,98,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+
+.gradient span{
+    background: -webkit-linear-gradient(rgba(255,121,0,1) 0%, rgba(253,47,0,1) 35%, rgba(255,0,98,1) 100%);;
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari */
+    color: transparent;
 }
 
 .title-letter {
