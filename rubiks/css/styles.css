@@ -5,7 +5,7 @@
     font-style: normal; 
     font-variant: normal; 
     font-weight: 300;
-    color: rgb(181, 181, 181);
+    color: rgb(213, 213, 213);
 }
 
 html {
@@ -105,7 +105,12 @@ body{
     position: relative;
     top: 20px;
     animation: bob-up-down 0.6s infinite alternate ease-in-out;
+    transition: scale 0.2s;
   }
+
+.arrow:hover{
+    scale: 4;
+}
 
 @keyframes bob-up-down{
     to{
