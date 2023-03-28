@@ -1,0 +1,162 @@
+
+*{
+    font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif; 
+    font-size: 30px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 300;
+    color: rgb(181, 181, 181);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(139,14,150,1) 25%, rgba(76,0,130,1) 91%);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.content {
+    width: 50%;
+    margin: auto;
+}
+
+.title h2 {
+    margin: 0;
+    margin-top: 15vh;
+    font-size: 2rem;
+}
+
+.title #name{
+    font-size: 1.5rem;
+}
+
+.rubik-container{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    align-items: flex-end;
+}
+
+#cube{
+    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-left: 15px;
+}
+
+
+.title-letter {
+    margin: 9px;
+    margin-bottom: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 3rem;
+    animation: reduce-margin 1s forwards 2.5s;
+}
+
+.left{
+    rotate: -90deg;
+    animation: set-angle 0.5s forwards 1s,reduce-margin 1s forwards 2.5s;
+}
+
+.half{
+    rotate: -180deg;
+    animation: set-angle 1s forwards 1.5s,reduce-margin 1s forwards 2.5s;
+}
+
+.right{
+    rotate: 90deg;
+    animation: set-angle 0.5s forwards 2s,reduce-margin 1s forwards 2.5s;
+}
+
+.spin-90{
+    rotate: 90deg;
+    animation: set-angle 0.5s forwards 1.75s,reduce-margin 1s forwards 2.5s;
+}
+
+@keyframes set-angle {
+    to {
+        rotate: 0deg;
+    }
+}
+@keyframes reduce-margin{
+    to {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+#continue{
+    margin-top: 15px;
+    margin: auto;
+    width: fit-content;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    rotate: 45deg;
+    scale: 3;
+    position: relative;
+    top: 20px;
+    animation: bob-up-down 0.6s infinite alternate ease-in-out;
+  }
+
+@keyframes bob-up-down{
+    to{
+        top: 0;
+    }
+}
+
+
+#intro-rubik{
+    margin-top: 20vh;
+    
+}
+
+
+#intro-rubik img {
+    float: right;
+    margin: 0 20px 20px 0;
+    width: 300px;
+    height: auto;
+  }
+
+  .navbar {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    height: 3rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+
+.navbar li {
+    margin: 10px;
+    font-size: 1.1rem;
+
+}
+
+.navbar a{
+    text-decoration: none;
+    color: rgb(160, 160, 160);
+    transition: font-size 0.2s;
+}
+
+.navbar a:hover{
+    text-decoration: none;
+    color: rgb(197, 197, 197);
+    font-size: 1.2rem;
+}
+
+
+#active{
+    color: rgb(255, 255, 255);
+}
