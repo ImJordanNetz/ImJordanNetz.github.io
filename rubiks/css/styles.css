@@ -62,6 +62,7 @@ body{
     animation: set-angle 0.5s forwards 1s,reduce-margin 1s forwards 2.5s;
 }
 
+
 .half{
     rotate: -180deg;
     animation: set-angle 1s forwards 1.5s,reduce-margin 1s forwards 2.5s;
@@ -155,7 +156,7 @@ body{
     transition: font-size 0.2s;
 }
 
-.navbar a:hover{
+.navbar a:focus, .navbar a:hover{
     text-decoration: none;
     color: rgb(197, 197, 197);
     font-size: 1.2rem;
@@ -164,4 +165,11 @@ body{
 
 #active{
     color: rgb(255, 255, 255);
+}
+
+
+
+.title h3 {
+    margin: 0;
+    font-size: 1.5rem;
 }
