@@ -10,7 +10,7 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: rgb(37, 0, 71);
+    background-color: rgb(41, 3, 76);
     margin: 0;
     padding: 0;
     background-attachment: fixed;
@@ -52,7 +52,7 @@ body{
 
 
 .gradient span{
-    background: -webkit-linear-gradient(rgba(255,121,0,1) 0%, rgba(253,47,0,1) 35%, rgba(255,0,98,1) 100%);;
+    background: linear-gradient(rgba(255,121,0,1) 0%, rgba(253,47,0,1) 35%, rgba(255,0,98,1) 47%, rgba(254,13,71,1) 100%);
     background-clip: text;
     -webkit-background-clip: text; /* For Safari */
     color: transparent;
@@ -133,7 +133,7 @@ body{
 
 #intro-rubik{
     margin-top: 20vh;
-    
+    margin-bottom: 10vh;
 }
 
 
@@ -144,7 +144,7 @@ body{
     height: auto;
   }
 
-  .navbar {
+.navbar {
     display: flex;
     list-style-type: none;
     justify-content: center;
