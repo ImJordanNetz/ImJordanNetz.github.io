@@ -12,7 +12,7 @@ html {
     scroll-behavior: smooth;
     background-color: #FF3CAC;
     background-image: linear-gradient(225deg, #510430 0%, #4c286b 50%, #631980 100%);
-    
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     background-attachment: fixed;
@@ -210,4 +210,35 @@ body{
     to{
         rotate: -20deg;
     }
+}
+
+
+
+#gallery-title{
+    margin-top: 3vh;
+}
+
+.gallery-images{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-images img {
+    max-width: 100%;
+
+    height: 30vh;
+    display: block; /* remove extra space below image */
+    margin: auto;
+}
+
+.gallery-images p{
+    margin: auto;
+}
+
+.gallery-images div {
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
 }

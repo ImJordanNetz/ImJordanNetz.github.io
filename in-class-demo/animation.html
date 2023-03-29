@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .image-container {
+            position: relative;
+            width: 300px; /* set the width of your image container */
+            height: 200px; /* set the height of your image container */
+            }
+
+            .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out; /* set the transition effect you want */
+            }
+
+            .hover-text:hover + .image-container .image {
+            opacity: 0.5; /* set the opacity value you want when the text is hovered */
+            }
+
+    </style>
+</head>
+<body>
+    <p class="hover-text">Hover over me to animate the image</p>
+<div class="image-container">
+  <div class="image">LALALA</div>
+</div>
+
+</body>
+</html>
