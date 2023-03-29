@@ -51,12 +51,13 @@ body{
 }
 
 
-.gradient span{
-    background: linear-gradient(rgba(255,121,0,1) 0%, rgba(253,47,0,1) 35%, rgba(255,0,98,1) 47%, rgba(254,13,71,1) 100%);
+.gradient span, h2.gradient{
+    background: linear-gradient(rgba(255,121,0,1) 0%, rgba(253,47,0,1) 33%, rgba(255,0,98,1) 66%, rgb(250, 9, 65) 100%);
     background-clip: text;
     -webkit-background-clip: text; /* For Safari */
     color: transparent;
 }
+
 
 .title-letter {
     margin: 9px;
