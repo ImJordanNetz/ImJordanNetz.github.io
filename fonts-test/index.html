@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/hbj6qnz.css">
+    <title>Font's Test</title>
+    <style>
+        body{
+            font-family: "forma-djr-banner", sans-serif;
+            font-size: large;
+        }
+
+        .extra-light {
+            font-weight: 400;
+        }
+
+        .medium {
+            font-weight: 600;
+        }
+
+        .bold {
+            font-weight: 700;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="bold"></h1>
+    <h2 class="bold italic">This is the bold and italic title to my fonts</h2>
+    <h2 class="bold">This is the bold title without italics</h2>
+    <p class="medium">Normal - The quick brown fox jumps over the lazy fence</p>
+    <p class="medium" id="font_label">Font: "forma-djr-banner", sans-serif</p>
+</body>
+
+<button id="change-fonts" onclick="change_fonts()">Change Fonts</button>
+
+<script>
+    const fonts = ["forma-djr-banner, sans-serif", "Impact,Charcoal,sans-serif", "Arial, Helvetica, sans-serif", "Lucida Console, Courier New, monospace"];
+    let counter = 0;
+    let btn = document.getElementById("change-fonts");
+    function change_fonts(){
+        counter = (counter + 1) % fonts.length;
+        let body = document.getElementsByTagName('body')[0];
+        let font_label = document.getElementById("font_label")
+        body.style.fontFamily = fonts[counter];
+        font_label.innerText = "Font: " + fonts[counter]
+    }
+</script>
+</html>
