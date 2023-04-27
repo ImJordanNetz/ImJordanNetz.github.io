@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'forma-djr-banner';
+    src: url('https://use.typekit.net/hbj6qnz.css');
+  }
+
+body {
+    background-color: rgb(18, 4, 56);
+    color:  white;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "forma-djr-banner", sans-serif;
+        font-size: large;
+        font-weight: 600;
+}
+
+.extra-light {
+    font-weight: 400;
+}
+
+.medium {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 35% 35% 30%;
+    grid-gap: 10px
+}
+
+.grid-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.nav {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+        margin-bottom: 0;
+        padding: 0;
+}
+.main-image {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+    margin-top: 0;
+    padding: 0;
+}
+
+.main1 {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+}
+
+.support1{
+    grid-column: 1;
+    background-color: red;
+    grid-row:4;
+}
+
+.support2{
+    grid-column: 2;
+    background-color: red;
+    grid-row:4;
+}
+
+.main2 {
+    grid-column: 1 / span 2;
+    grid-row: 5;
+}
+.sidenav{
+    grid-column: 3;
+    grid-row: 3 / span 3;
+    background-color: red;
+}
+
+.navbar {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    height: 3rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+
+.navbar li {
+    margin: 10px;
+    font-size: 1.1rem;
+
+}
+.navbar a{
+    text-decoration: none;
+    color: rgb(222, 222, 222);
+    transition: font-size 0.3s;
+}
+
+.navbar a:hover{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+
+#active{
+    color: rgb(255, 255, 255);
+}
+
+.news{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column: 1 / span 2;
+    grid-row: 4;
+    grid-gap: 5px;
+}
+
+.resources {
+    grid-column: 3;
+    grid-row: 4;
+    background-color: white;
+    border-radius: 3px;
+    
+}
+
+.news-item{
+    background-color: white;
+    border-radius: 3px;
+    color: black;
+}
