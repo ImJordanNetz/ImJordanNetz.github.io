@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Home</title>
+    <script defer>
+        
+        function change_darklight(){
+            let image = document.getElementById("darklight");
+            var root = document.documentElement;
+            if (image.getAttribute('data') === '1') {
+                image.src = './images/sun.png';
+                image.setAttribute('data', '0');
+                root.style.setProperty('--text', '#ffffff');
+                root.style.setProperty('--bckgrnd', 'rgb(30, 30, 30)');
+                root.style.setProperty('--primary', '#00C5C8');
+                root.style.setProperty('--secondary', '#d4112b');
+            } else {
+                image.src = './images/moon.png';
+                image.setAttribute('data', '1');
+                root.style.setProperty('--text', '#000000');
+                root.style.setProperty('--bckgrnd', '#ffffff');
+                root.style.setProperty('--primary', '#0b6909');
+                root.style.setProperty('--secondary', '#f00a88');
+            }
+        }
+    </script>
+
+    <style>
+        .content{
+            display: grid;
+            grid-template-columns: 55% 45%;
+        }
+        .content div {
+            
+        }
+        .title{
+            margin-top: 3rem;
+            text-align: right;
+        }
+
+        .title h1 {
+            color: var(--primary);
+            font-size: 7rem;
+            margin: 0;
+            
+        }
+
+        .title p{
+            position: relative;
+            color: var(--primary);
+            font-size: 2rem;
+            opacity: 0;
+            margin: 0;
+            transform: translate(-25%, 0%);
+            animation: slide-in 1s forwards ease-in-out;
+            animation-delay: 0.75s;
+        }
+
+        .arrow-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+        }
+
+        .arrow-container a {
+            text-decoration: none;
+        }
+
+        #arrow{
+            position: absolute;
+            margin-top: 5rem;
+            rotate: 90deg;
+            scale: 10;
+            opacity: 0;
+            fill: var(--text);
+            transition: fill 0.4s ease-in-out, margin-top 0.3s ease-in-out;
+            animation: slide-in 1s forwards ease-in-out;
+            transform: translate(-25%, 0%);
+            animation-delay: 1.75s;
+        }
+
+        #arrow:hover{
+            fill: var(--secondary);
+            margin-top: 10rem;
+        }
+
+
+
+        @keyframes slide-in {
+            to{
+                transform: translate(0);
+                opacity: 1;
+            }
+        }
+
+        #content-text {
+            margin-top: 1rem;
+            margin-left: 20%;
+            text-align: right;
+        }
+
+        #content-img {
+
+        }
+
+        #content-img img {
+            width: 80%;
+            margin-left: 10%;
+            border: 0.1rem solid var(--secondary);
+            border-radius: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="nav">
+        <div class="home">
+            <div><a href="index.html">Study Smart</a><div class="underline"></div></div>
+        </div>
+        <div class="center">
+            <ul class="navbar">
+                <li><div><a href="index.html" id="active">Sleep</a><div class="underline"></div></li>
+                <li><div><a href="gallery.html">Time Management</a><div class="underline"></div></li>
+                <li><div><a href="resources.html">Page 4</a><div class="underline"></div></li>
+                <li><div><a href="contact.html">Page 5</a><div class="underline"></div></li>
+                <li><div><a href="contact.html">Page 6</a><div class="underline"></div></li>
+            </ul>
+        </div>
+        <div class="darklight">
+            <button style="background-color: inherit; border: none; cursor: pointer;" onclick="change_darklight()"><img id="darklight" data="1" src="./images/moon.png" style="width: 45px;"></button>
+        </div>
+    </div>
+    <div style="width: 100px; height: 100px; background-color: var(--primary); position: fixed; bottom: 0;">
+        Primary Color
+    </div>
+    <div style="width: 100px; height: 100px; background-color: var(--secondary); position: fixed; right: 0; bottom: 0;">
+        Secondry Color
+    </div>
+
+    <div class="content">
+        <div class="title">
+            <h1 class="bold">Studying</h1>
+            <p class="italic">And how to do it better</p>
+        </div>
+        <div class="arrow-container">
+            <a href="#content-text">
+                <svg id="arrow" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg>
+            </a>
+            </div>
+        
+        <div class="SPACING" style="grid-column: 1 / span 2; height: 50vh;"></div>
+        
+        <div id="content-text">
+            Being good at studying is essential for success in today's fast-paced and competitive world. By developing effective study habits, you can improve your learning and retention, enhance your critical thinking and problem-solving skills, and increase your overall academic performance. Good study habits help you stay organized, focused, and motivated, making it easier to manage your time, meet deadlines, and achieve your goals. In addition, being a good student not only prepares you for academic success, but it also sets you up for success in your future career and personal life. By developing strong study skills, you can become a lifelong learner, continually acquiring new knowledge and skills, and adapting to new challenges and opportunities. So, invest in your education, cultivate good study habits, and unlock your full potential!
+        </div>
+        <div id="content-img">
+            <img src="./images/studying-student.jpg">
+        </div>
+        <div class="SPACING" style="grid-column: 1 / span 2; height: 20vh;"></div>
+    </div>
+    
+</body>
+</html>

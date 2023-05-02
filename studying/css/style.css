@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'forma-djr-banner';
+    src: url('https://use.typekit.net/hbj6qnz.css');
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --text: #000000;
+    --bckgrnd: #ffffff;
+    --primary: #0b6909;
+    --secondary: #f00a88;
+    color: var(--text);
+    font-size: 20px;
+}
+
+body{
+    background-color: var(--bckgrnd);
+    padding: 0;
+    margin: 0;
+    font-family: Haas Grotesk Text Pro, sans-serif;
+    font-size: large;
+    
+}
+
+.extra-light {
+    font-weight: 400;
+}
+
+.medium {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 750;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.nav {
+    display: grid;
+    font-size: 1.2rem;
+    grid-template-columns: 15% 70% 15%;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+}
+
+.nav > div {
+    display: flex;
+    flex-direction: row;
+    grid-row: 1;
+    align-items: center;
+}
+
+.nav a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.home {
+    justify-content: left;
+    display: flex;
+    flex-direction: row;
+}
+
+.center {
+    position: relative;
+    justify-content: center;
+}
+
+
+.center a {
+    margin: 0;
+    
+}
+
+.navbar{
+    align-items: center;
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.navbar li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    transition: opacity 0.5s, font-size 0.5s ease-in-out;
+    display: flex;
+    flex-direction: row;
+}
+
+  
+.navbar:has(li:hover) li:not(:hover) {
+    opacity: 0.5;
+}
+
+
+.underline{
+    width: 0%;
+    height: 0.1rem;
+    background-color: var(--text);
+    transition: width 0.3s ease-in-out;
+    margin: auto;
+}
+
+.navbar li:hover .underline, .home > div:hover .underline{
+    width: 100%;
+}
+
+
+.darklight{
+    justify-content: right;
+}
+
+
