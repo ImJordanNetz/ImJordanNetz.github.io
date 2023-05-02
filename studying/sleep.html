@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Sleep</title>
+    <script defer>
+        
+        function change_darklight(){
+            let image = document.getElementById("darklight");
+            var root = document.documentElement;
+            if (image.getAttribute('data') === '1') {
+                image.src = './images/sun.png';
+                image.setAttribute('data', '0');
+                root.style.setProperty('--text', '#ffffff');
+                root.style.setProperty('--bckgrnd', 'rgb(30, 30, 30)');
+                root.style.setProperty('--primary', '#00C5C8');
+                root.style.setProperty('--secondary', '#d4112b');
+            } else {
+                image.src = './images/moon.png';
+                image.setAttribute('data', '1');
+                root.style.setProperty('--text', '#000000');
+                root.style.setProperty('--bckgrnd', '#ffffff');
+                root.style.setProperty('--primary', '#0b6909');
+                root.style.setProperty('--secondary', '#f00a88');
+            }
+        }
+        
+    </script>
+    <style>
+        .text-land{
+            display: grid;
+            grid-template-columns: 5;    
+            grid-template-rows: 5;        
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="home">
+            <div><a href="index.html">Study Smart</a><div class="underline"></div></div>
+        </div>
+        <div class="center">
+            <ul class="navbar">
+                <li><div><a href="index.html" id="active">Sleep</a><div class="underline"></div></li>
+                <li><div><a href="gallery.html">Time Management</a><div class="underline"></div></li>
+                <li><div><a href="resources.html">Page 4</a><div class="underline"></div></li>
+                <li><div><a href="contact.html">Page 5</a><div class="underline"></div></li>
+                <li><div><a href="contact.html">Get Zen</a><div class="underline"></div></li>
+            </ul>
+        </div>
+        <div class="darklight">
+            <button style="background-color: inherit; border: none; cursor: pointer;" onclick="change_darklight()"><img id="darklight" data="1" src="./images/moon.png" style="width: 45px;"></button>
+        </div>
+    </div>
+    <div style="width: 100px; height: 100px; background-color: var(--primary); position: fixed; bottom: 0;">
+        Primary Color
+    </div>
+    <div style="width: 100px; height: 100px; background-color: var(--secondary); position: fixed; right: 0; bottom: 0;">
+        Secondry Color
+    </div>
+<div class="text-land">
+    <h1 style="text-align: center; font: bolder; font-size: 300px;">SLEEP</h1>
+   
+    <p style="font-family: Arial, Helvetica, sans-serif; margin-left: 5rem; margin-right: 5rem; font-weight: 5px; line-height: 3.5rem; font-size: 2rem; text-align: center;">Sleep is a crucially underrated aspect of our health and happiness that has a bigger effect on our daily activities than you might think. Sleep is essential for effective studying because it allows the brain to consolidate and retain the information learned during each day. During sleep, the brain engages in a process called memory consolidation, where it organizes and strengthens the neural connections formed during studying. This process is crucial for encoding new information into long-term memory and ensuring that it can be retrieved and applied later on. Additionally, sleep is essential for cognitive function, attention, and decision-making, all of which are crucial for useful studying. Without enough sleep, students may struggle with concentration, memory recall, and creative problem-solving, hindering their ability to perform well at school.</p>
+
+</div>
+</body>
+</html>
