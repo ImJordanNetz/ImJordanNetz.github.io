@@ -6,28 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>Home</title>
-    <script defer>
-        
-        function change_darklight(){
-            let image = document.getElementById("darklight");
-            var root = document.documentElement;
-            if (image.getAttribute('data') === '1') {
-                image.src = './images/sun.png';
-                image.setAttribute('data', '0');
-                root.style.setProperty('--text', '#ffffff');
-                root.style.setProperty('--bckgrnd', 'rgb(30, 30, 30)');
-                root.style.setProperty('--primary', '#00C5C8');
-                root.style.setProperty('--secondary', '#d4112b');
-            } else {
-                image.src = './images/moon.png';
-                image.setAttribute('data', '1');
-                root.style.setProperty('--text', '#000000');
-                root.style.setProperty('--bckgrnd', '#ffffff');
-                root.style.setProperty('--primary', '#0b6909');
-                root.style.setProperty('--secondary', '#f00a88');
-            }
-        }
-    </script>
+    <script src="./js/script.js" defer></script>
 
     <style>
         .content{
@@ -128,11 +107,11 @@
         </div>
         <div class="center">
             <ul class="navbar">
-                <li><div><a href="index.html" id="active">Sleep</a><div class="underline"></div></li>
-                <li><div><a href="sleep.html">Time Management</a><div class="underline"></div></li>
-                <li><div><a href="resources.html">Page 4</a><div class="underline"></div></li>
-                <li><div><a href="contact.html">Page 5</a><div class="underline"></div></li>
-                <li><div><a href="contact.html">Get Zen</a><div class="underline"></div></li>
+                <li><div><a href="sleep.html" id="active">Sleep</a><div class="underline"></div></li>
+                <li><div><a href="time.html">Time Management</a><div class="underline"></div></li>
+                <li><div><a href="">Page 4</a><div class="underline"></div></li>
+                <li><div><a href="">Page 5</a><div class="underline"></div></li>
+                <li><div><a href="zen.html">Get Zen</a><div class="underline"></div></li>
             </ul>
         </div>
         <div class="darklight">
