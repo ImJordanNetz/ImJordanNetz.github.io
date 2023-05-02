@@ -34,9 +34,7 @@
             display: grid;
             grid-template-columns: 55% 45%;
         }
-        .content div {
-            
-        }
+
         .title{
             margin-top: 3rem;
             text-align: right;
@@ -99,14 +97,18 @@
         }
 
         #content-text {
-            margin-top: 1rem;
-            margin-left: 20%;
-            text-align: right;
+            margin-right: 20%;
+            text-align: left;
+            line-height: 1.2rem;
         }
 
-        #content-img {
+        #content-text h2 {
+            color: var(--primary);
+            font-size: 3rem;
+            line-height: 0;
 
         }
+
 
         #content-img img {
             width: 80%;
@@ -126,7 +128,7 @@
         <div class="center">
             <ul class="navbar">
                 <li><div><a href="index.html" id="active">Sleep</a><div class="underline"></div></li>
-                <li><div><a href="gallery.html">Time Management</a><div class="underline"></div></li>
+                <li><div><a href="sleep.html">Time Management</a><div class="underline"></div></li>
                 <li><div><a href="resources.html">Page 4</a><div class="underline"></div></li>
                 <li><div><a href="contact.html">Page 5</a><div class="underline"></div></li>
                 <li><div><a href="contact.html">Get Zen</a><div class="underline"></div></li>
@@ -154,14 +156,20 @@
             </a>
             </div>
         
-        <div class="SPACING" style="grid-column: 1 / span 2; height: 50vh;"></div>
+        <div class="SPACING boldt" style="grid-column: 1 / span 2; height: 50vh;"></div>
         
-        <div id="content-text">
-            Being good at studying is essential for success in today's fast-paced and competitive world. By developing effective study habits, you can improve your learning and retention, enhance your critical thinking and problem-solving skills, and increase your overall academic performance. Good study habits help you stay organized, focused, and motivated, making it easier to manage your time, meet deadlines, and achieve your goals. In addition, being a good student not only prepares you for academic success, but it also sets you up for success in your future career and personal life. By developing strong study skills, you can become a lifelong learner, continually acquiring new knowledge and skills, and adapting to new challenges and opportunities. So, invest in your education, cultivate good study habits, and unlock your full potential!
-        </div>
-        <div id="content-img">
+        
+        <div id="content-img" style="grid-row:3; z-index: 1;">
             <img src="./images/studying-student.jpg">
         </div>
+
+        <div id="content-text" style="grid-row:3;">
+            <h2>Why Learn</h2>
+            <p>Being good at studying is essential for success in today's fast-paced and competitive world.</p>
+            <p>Developing effective study habits, you can improve your learning and retention, enhance your critical thinking and problem-solving.</p>
+            <p>Good study habits help you stay organized, focused, and motivated, making it easier to manage your time, meet deadlines, and achieve your goals.</p>
+        </div>
+        
         <div class="SPACING" style="grid-column: 1 / span 2; height: 20vh;"></div>
     </div>
     
