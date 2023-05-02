@@ -7,6 +7,81 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <script src="./js/script.js" defer></script>
     <title>Get Zen</title>
+    <style>
+        .content{
+            display: grid;
+            grid-template-columns: 60% 40%;
+            margin-bottom: 2rem;
+        }
+
+        .title{
+            
+            text-align: left;
+            padding-left: 20%;
+        }
+
+        .title h1 {
+            color: var(--primary);
+            font-size: 6rem;
+            margin: 0;
+            margin-bottom: 2rem;
+            
+        }
+
+        .title p {
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+
+        .title-img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .title-img img {
+            width: 80%;
+            border: 0.1rem solid var(--secondary);
+            border-radius: 10px;
+        }
+
+        .zen-cards {
+            grid-column: 1 / -1;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 0;
+            margin-bottom: 2rem;
+        }
+
+        .card{
+            margin: 0;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            border-radius: 10px;
+            background-color: var(--bckgrnd);
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+            color: var(--text);
+            border: 0.1px solid var(--text);
+            height: 100%;
+            padding: 0.5rem;
+            max-width: 25%;
+
+        }
+
+        .card h2 {
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .card iframe{
+            border: 2px solid var(--secondary);
+            display: block;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
     <div id="top"></div>
     <div class="nav">
         <div class="home">
@@ -25,14 +100,44 @@
             <button style="background-color: inherit; border: none; cursor: pointer;" onclick="change_darklight()"><img id="darklight" data="1" src="./images/moon.png" style="width: 45px;"></button>
         </div>
     </div>
-    <div class="footer" style="grid-column: 1 / -1;">
-        <div class="footer-text">
-            <p>Website Made By: <a href="mailto:ocrosby@eastsideprep.org">Oliver Crosby</a>, <a href="mailto:jonetz@eastsideprep.org" class="creator">Jordan Netz</a>, <a href="mailto:ezheng@eastsideprep.org">Eddy Zheng</a> | <a href="#top">Scroll To Top</a></p>
+
+    <div class="content">
+        <div class="title">
+            <h1 class="bold">Being Zen</h1>
+            <p>Studying can often be stressful, and stress and anxiety can negatively impact our ability to learn and retain information. When we are zen, we are able to manage stress and anxiety, allowing us to focus better on our studies. </p>
+        </div>
+        <div class="title-img">
+            <img src="./images/zen-person.jpg">
+        </div>
+
+        <div class="zen-cards">
+            <div class="card">
+                <h2>Breathing Exercises</h2>
+                <p>Breathing exercises can be an effective way to promote a zen state by helping to calm the mind and reduce stress and anxiety.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tybOi4hjZFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="card">
+                <h2>Nature Sounds</h2>
+                <p>Nature sounds, such as the sound of waves, birds chirping, or rain falling, can be soothing to the mind and help promote relaxation and a sense of calm</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/eKFTSSKCzWA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <div class="card">
+                <h2>Yoga</h2>
+                <p>Yoga is an great way to promote a zen state by combining physical movements and meditation techniques that can help to reduce stress and anxiety.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/j7rKKpwdXNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+        </div>
+
+        <div class="footer" style="grid-column: 1 / -1;">
+            <div class="footer-text">
+                <p>Website Made By: <a href="mailto:ocrosby@eastsideprep.org">Oliver Crosby</a>, <a href="mailto:jonetz@eastsideprep.org" class="creator">Jordan Netz</a>, <a href="mailto:ezheng@eastsideprep.org">Eddy Zheng</a> | <a href="#top">Scroll To Top</a></p>
+            </div>
         </div>
     </div>
 
 
-</head>
 <body>
     
 </body>
