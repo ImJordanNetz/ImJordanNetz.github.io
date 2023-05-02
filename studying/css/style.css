@@ -118,4 +118,20 @@ body{
     justify-content: right;
 }
 
+.footer{
+    margin-top: 1rem;
+    background-color: var(--primary);
+    color: var(--bckgrnd);
+}
 
+.footer-text {
+    padding: 1;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+}
+
+
+.footer-text a{
+    color: #ffffff;
+}
