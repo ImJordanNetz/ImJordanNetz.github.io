@@ -107,7 +107,6 @@ body{
     height: 0.1rem;
     background-color: var(--text);
     transition: width 0.3s ease-in-out;
-    margin: auto;
 }
 
 .navbar li:hover .underline, .home > div:hover .underline{
