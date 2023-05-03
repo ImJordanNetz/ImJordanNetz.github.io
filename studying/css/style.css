@@ -9,12 +9,13 @@ html{
 }
 
 :root{
+    /*NEW FEATURE: Using variables to allow for a dark/light mode switch*/
     --text: #000000;
     --bckgrnd: #ffffff;
     --primary: #0b6909;
     --secondary: #f00a88;
     color: var(--text);
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 
 body{
@@ -44,7 +45,7 @@ body{
 
 .nav {
     display: grid;
-    font-size: 1.rem;
+    font-size: 1.1rem;
     grid-template-columns: 15% 70% 15%;
     margin-top: 1rem;
     margin-left: 2rem;
@@ -97,7 +98,7 @@ body{
     flex-direction: row;
 }
 
-  
+/*NEW FEATURE :has psuedo class*/
 .navbar:has(li:hover) li:not(:hover) {
     opacity: 0.5;
 }
