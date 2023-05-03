@@ -44,7 +44,7 @@ body{
 
 .nav {
     display: grid;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     grid-template-columns: 15% 70% 15%;
     margin-top: 1rem;
     margin-left: 2rem;
@@ -135,4 +135,5 @@ body{
 
 .footer-text a{
     color: #ffffff;
+    cursor: pointer;
 }

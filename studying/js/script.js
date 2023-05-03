@@ -6,7 +6,7 @@ function change_darklight(){
         image.setAttribute('data', '0');
         root.style.setProperty('--text', '#ffffff');
         root.style.setProperty('--bckgrnd', 'rgb(30, 30, 30)');
-        root.style.setProperty('--primary', '#00C5C8');
+        root.style.setProperty('--primary', '#7F00FF');
         root.style.setProperty('--secondary', '#d4112b');
     } else {
         image.src = './images/moon.png';
