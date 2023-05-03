@@ -44,7 +44,7 @@ body{
 
 .nav {
     display: grid;
-    font-size: 1.1rem;
+    font-size: 1.rem;
     grid-template-columns: 15% 70% 15%;
     margin-top: 1rem;
     margin-left: 2rem;
