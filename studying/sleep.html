@@ -10,9 +10,44 @@
     <style>
         .text-land{
             display: grid;
-            grid-template-columns: 5;    
-            grid-template-rows: 5;        
+            grid-template-columns: 50% 50%;           
         }
+
+        .text-land h1 {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        .text-land p {
+            grid-row: 2 /span 2;
+            grid-column: 2;
+        }
+
+        .text-land .sleeping-girl {
+            grid-row: 1;
+            grid-column: 2;
+            display: grid;
+            place-content: center;
+        }
+
+        .table{
+            text-align: center;
+            grid-row: 2;
+            grid-column: 1;
+            
+                    }
+    tr
+{
+  line-height: 50px;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
+th{
+    width: 5%;
+}
     </style>
 </head>
 <body>
@@ -36,10 +71,66 @@
         </div>
     </div>
 <div class="text-land">
-    <h1 style="text-align: center; font: bolder; font-size: 300px;">SLEEP</h1>
-   
-    <p style="font-family: Arial, Helvetica, sans-serif; margin-left: 5rem; margin-right: 5rem; font-weight: 5px; line-height: 3.5rem; font-size: 2rem; text-align: center;">Sleep is a crucially underrated aspect of our health and happiness that has a bigger effect on our daily activities than you might think. Sleep is essential for effective studying because it allows the brain to consolidate and retain the information learned during each day. During sleep, the brain engages in a process called memory consolidation, where it organizes and strengthens the neural connections formed during studying. This process is crucial for encoding new information into long-term memory and ensuring that it can be retrieved and applied later on. Additionally, sleep is essential for cognitive function, attention, and decision-making, all of which are crucial for useful studying. Without enough sleep, students may struggle with concentration, memory recall, and creative problem-solving, hindering their ability to perform well at school.</p>
-
+    <h1 style="text-align: center; font: bolder; font-size: 10rem;">SLEEP</h1>
+    <p style="font-family: Arial, Helvetica, sans-serif; margin-left: 5rem; margin-right: 5rem; font-weight: 5px; line-height: 3.5rem; font-size: 1.5rem; text-align: center;">                             Sleep is a crucially underrated aspect of our health and happiness that has a bigger effect on our daily activities than you might think. Sleep is essential for effective studying because it allows the brain to consolidate and retain the information learned during each day. During sleep, the brain engages in a process called memory consolidation, where it organizes and strengthens the neural connections formed during studying. This process is crucial for encoding new information into long-term memory and ensuring that it can be retrieved and applied later on. Additionally, sleep is essential for cognitive function, attention, and decision-making, all of which are crucial for useful studying. Without enough sleep, students may struggle with concentration, memory recall, and creative problem-solving, hindering their ability to perform well at school.</p>
+    <div class="sleeping-girl">
+        <img  src="images/sleeping clip art.png" alt="sleeping person" style="width: 13rem; ;">
+    </div>
+    <h1>How much sleep do you need?</h1>
+    <table class="table">
+        <tr>
+            <th>
+            Hours:
+            </th>
+            <th>Effects:</th>
+                  </tr>
+          <tr>
+            <td>1 Hour</td>
+            <td>Not enough sleep to really count - will increase tiredness and physical function</td>
+                      </tr>
+          <tr>
+            <td>2 Hours</td>
+            <td>Very sleep deprived, major risk of accidents</td>
+          </tr>
+          <tr>
+            <td>3 Hours</td>
+            <td>Impaired motor function and decreased accuracy</td>
+          </tr>
+          <tr>
+            <td>4 Hours</td>
+            <td>Indadequate sleep - irritability and decreased motivation</td>
+          </tr>
+          <tr>
+            <td>5 Hours</td>
+            <td>Reduced creativity and increased risk of obesity</td>
+          </tr>
+          <tr>
+            <td>6 Hours</td>
+            <td>Somewhat inadequate sleep, decreased productivity</td>
+          </tr>
+          <tr>
+            <td>7 Hours</td>
+            <td>Reccomended amount of sleep for most adults</td>
+          </tr>
+          <tr>
+            <td>8 Hours</td>
+            <td>Provides the best amount of sleep for cognitive and physical function</td>
+          </tr>
+          <tr>
+            <td>9 Hours</td>
+            <td>May be beneficial for some people, not much of a real benefit</td>
+          </tr>
+          <tr>
+            <td>10 Hours</td>
+            <td>Excessive sleep - leads to grogginess and impaired cognitive function</td>
+          </tr>
+    </table>
+</div>
+<div class="footer" style="grid-column: 1 / -1;">
+    <div class="footer-text">
+        <p>Webpage Made By: <a href="mailto:ocrosby@eastsideprep.org" class="creator">Oliver Crosby</a> | <a href="#top">Scroll To Top</a></p>
+    </div>
 </div>
 </body>
+
 </html>
