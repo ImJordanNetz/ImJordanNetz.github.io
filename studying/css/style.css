@@ -140,10 +140,10 @@ body{
 }
 
 #trailer {
-    height: 20px;
-    width: 20px;
+    height: 1rem;
+    width: 1rem;
     background-color: var(--secondary);
-    border-radius: 20px;
+    border-radius: 1rem;
     
     position: fixed;
     left: 0px;

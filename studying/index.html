@@ -96,6 +96,45 @@
             margin-left: 10%;
             border: 0.1rem solid var(--secondary);
             border-radius: 10px;
+            height: 100%;
+        }
+
+        .how-to-learn-text h2{
+            margin-left: 20%;
+            text-align: left;
+            line-height: 1.2rem;
+            color: var(--primary);
+            font-size: 3rem;
+            line-height: 0;
+        }
+
+        .how-to-learn-text p {
+            margin-left: 20%;
+            text-align: left;
+            line-height: 1.2rem;
+            font-size: 1rem;
+        }
+
+        .how-to-learn-table {
+            display: grid;
+            place-content: center;
+
+        }
+        .how-to-learn-table td, .how-to-learn-table th {
+            padding: 0.5rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .how-to-learn-table a{
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        .how-to-learn-table th {
+            color: var(--primary);
         }
 
     </style>
@@ -133,11 +172,11 @@
             </a>
             </div>
         
-        <div class="SPACING boldt" style="grid-column: 1 / span 2; height: 50vh;"></div>
+        <div class="SPACING" style="grid-column: 1 / span 2; height: 50vh;"></div>
         
         
         <div id="content-img" style="grid-row:3; z-index: 1;">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/vN1aRN5bQQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/vN1aRN5bQQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
         <div id="content-text" style="grid-row:3;">
@@ -147,11 +186,47 @@
             <p>Good study habits help you stay organized, focused, and motivated, making it easier to manage your time, meet deadlines, and achieve your goals.</p>
         </div>
         
+        
+        <div class="SPACING" style="grid-column: 1 / span 2; height: 5vh;"></div>
+
+        <div class="how-to-learn-text">
+            <h2>How To Learn</h2>
+            <p>There are numurous online resoueces, including videos, articles, studies, and blogs. Although we implore you to explore these resoueces, we've done the hard job for you! Navigate our website to find both life practices and specific study techniques that will help you learn anything!</p>
+        </div>
+
+        <div class="how-to-learn-table">
+          <table>
+            <tr>
+                <th>Life Practices</th>
+                <th>Study Techniques</th>
+            </tr>
+            <tr>
+                <td><a href="sleep.html" id="active">Sleep</a></td>
+                <td><a href="blotting.html">Blotting</a></td>
+            </tr>
+            <tr>
+                <td><a href="time.html">Time Management</a></td>
+                <td><a href="repitition.html">Spaced Repitition</a></td>
+            </tr>
+            <tr>
+                <td><a href="zen.html">Get Zen</a></td>
+                <td></td>
+            </tr>
+          </table>
+              
+        </div>
+          
+
+
         <div class="footer" style="grid-column: 1 / -1;">
             <div class="footer-text">
                 <p>Webpage Made By: <a href="mailto:jonetz@eastsideprep.org" class="creator">Jordan Netz</a> | <a href="#top">Scroll To Top</a></p>
             </div>
         </div>
     </div>
+
+
+    
+
 </body>
 </html>
