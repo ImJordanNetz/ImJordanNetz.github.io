@@ -1,7 +1,4 @@
-@font-face {
-    font-family: 'forma-djr-banner';
-    src: url('https://use.typekit.net/hbj6qnz.css');
-}
+@import url('https://use.typekit.net/amm8fsu.css');
 
 html{
     scroll-behavior: smooth;
@@ -15,17 +12,18 @@ html{
     --primary: #0b6909;
     --secondary: #f00a88;
     color: var(--text);
-    font-size: 1.4vw;
+    font-size: 1.8vw;
+
 }
 
 body{
     background-color: var(--bckgrnd);
     padding: 0;
     margin: 0;
-    font-family: Haas Grotesk Text Pro, sans-serif;
-    font-size: large;
+    font-family: "mr-eaves-modern", sans-serif;
     
 }
+
 
 .extra-light {
     font-weight: 400;
