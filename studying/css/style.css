@@ -12,7 +12,7 @@ html{
     --primary: #0b6909;
     --secondary: #f00a88;
     color: var(--text);
-    font-size: 1.8vw;
+
 }
 
 body{
@@ -20,7 +20,7 @@ body{
     padding: 0;
     margin: 0;
     font-family: "mr-eaves-modern", sans-serif;
-    font-size: large;
+    font-size: 1.8vw;
 }
 
 
