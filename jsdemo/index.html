@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Demo</title>
+    <script defer>
+        let counter = 0;
+        function toggleHide(id, text){
+            let element = document.getElementById(id);
+            if (element.innerHTML === "") {
+                element.innerHTML = text;
+            } else {
+                element.innerHTML = "";
+            }
+        }
+
+        function toggleSwitch(){
+            let element = document.getElementById('switch');
+            if (element.src === 'http://127.0.0.1:5500/images/on.png') {
+
+                element.src = 'images/off.jpg';
+            } else{
+                element.src = 'images/on.png';
+            }
+        }
+
+        function add(){
+            let element = document.getElementById('counter');
+            counter += 1;
+            element.style.fontSize=3*counter+"px";
+            element.innerHTML = counter;
+        }
+
+        function askPass(){
+            let nameParagraph = document.getElementById('input')
+            let name = prompt("What is the password")
+            if (name === "882"){
+                nameParagraph.innerHTML = "Welcome to the batcave"
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <a href="https://google.com" target="_blank" onclick="alert('are you sure?')">Google.com</a>
+
+    <h1>What's my secret Identity?</h1>
+    <p id="identity"></p>
+    <button onclick="toggleHide('identity', 'is this working!')">Hide/Show</button>
+    <div style="height: 0.1vw; width: 100%; background-color: black;" ></div>
+    <img src="./images/on.png" id="switch" onclick="toggleSwitch()" style="width: 20vw;">
+    <div style="height: 0.1vw; width: 100%; background-color: black;" ></div>
+
+    <p id="counter">0</p>
+    <button onclick="add()">add to me</button>
+
+    <div style="height: 0.1vw; width: 100%; background-color: black;" ></div>
+
+    <h2>User Input</h2>
+    <p id="input"></p>
+    <button onclick="askPass()">Click Me</button>
+
+
+</body>
+</html>
