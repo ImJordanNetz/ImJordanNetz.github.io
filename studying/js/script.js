@@ -35,4 +35,3 @@ window.onmousemove = e => {
     fill: "forwards" 
   });
 }
-
