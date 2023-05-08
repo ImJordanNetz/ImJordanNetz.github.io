@@ -8,12 +8,84 @@
     <script src="./js/script.js" defer></script>
     <title>Spaced Repitition</title>
     <style>
-        
+            .content{
+            display: grid;
+            grid-template-columns: 60% 40%;
+        }
+
+        .title{
+            
+            text-align: left;
+            padding-left: 20%;
+        }
+
+        .title h1 {
+            color: var(--primary);
+            font-size: 6rem;
+            margin: 0;
+            margin-bottom: 2rem;
+            
+        }
+
+        .title p {
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+
+        .title-img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .title-img img {
+            width: 80%;
+            border: 0.1rem solid var(--secondary);
+            border-radius: 10px;
+        }
+
+        .zen-cards {
+            grid-column: 1 / -1;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 0;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card{
+            font-size: 1rem;
+            margin: 0;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            border-radius: 10px;
+            background-color: var(--bckgrnd);
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+            color: var(--text);
+            border: 0.1px solid var(--text);
+            height: 100%;
+            padding: 0.5rem;
+            max-width: 25%;
+
+        }
+
+        .card h2 {
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .card iframe{
+            border: 2px solid var(--secondary);
+            display: block;
+            max-width: 100%;
+            border-radius: 10px;
+            margin: auto;
+        }                
     </style>
 </head>
 <body>
-    <div id="trailer"></
     <div id="top"></div>
+    <div id="trailer"></div>    
     <div class="nav">
         <div class="home">
             <div><a href="index.html">Study Smart</a><div class="underline"></div></div>
@@ -31,7 +103,38 @@
             <button style="background-color: inherit; border: none; cursor: pointer;" onclick="change_darklight()"><img id="darklight" data="1" src="./images/moon.png" style="width: 45px;"></button>
         </div>
     </div>
-    <h1>Spaced Repitition</h1>
+
+    <div class="content">
+        <div class="title">
+                 <h1>Spaced repitition</h1>
+                <p> Although there are many methods of studying, spaced repitition is one of the most effective. </p>
+                <p>Common methods of cramming or simply cruising will deliver the stimulus of knowledge in different loads and durations of time. With spaced repitition howevr, we recieve the same stimulus over multiple durations of time, allowing us to digest managable loads of information and allowing us to remember that same information better compared to some of the previous methods described.</p>
+        </div>
+        <div class="title-img">
+            <img src="./images/spaced-repitition.jpg">
+        </div>
+
+        <div class="zen-cards">
+            <div class="card">
+            <h2>Consistency</h2>
+            <p>Consistency is key when applying the method of spaced repitition. This is because the whole method is based off of consistently intaking information. Being consistent allows our brains to recieve the same stimulus over and over again, inducing growth. </p>
+            <iframe src="https://www.youtube.com/embed/Kl0RM_9cVzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="card">
+            <h2>Active Recall</h2>
+            <p>The key to spaced repitition is that a person re-reads information in certain time intervals to better memorize that material. However, an added tool would be to try and actively memorize that material, as no matter how hard an individual tries to memorize information solely based off of re-reading, it would be useless if that information could not be reapplied.</p>
+            <iframe src="https://www.youtube.com/embed/h5PLO4XAXhs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div class="card">
+            <h2>Optimize material</h2>
+            <p>The best way to memorize a mass of information is to make sure that you as an individual are digesting it well. That means to organizae your materials in a way that aids you in the fastest mathod of memorization. Make the information work for you, and not the other way around.</p>
+            <iframe src="https://www.youtube.com/embed/G49R744t4Ew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+
+
+    </div>
     <div class="footer" style="grid-column: 1 / -1;">
         <div class="footer-text">
             <p>Website Made By: <a href="mailto:ocrosby@eastsideprep.org">Oliver Crosby</a>, <a href="mailto:jonetz@eastsideprep.org" class="creator">Jordan Netz</a>, <a href="mailto:ezheng@eastsideprep.org">Eddy Zheng</a> | <a href="#top">Scroll To Top</a></p>

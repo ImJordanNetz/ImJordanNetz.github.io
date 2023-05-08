@@ -8,6 +8,80 @@
     <script src="./js/script.js" defer></script>
     <title>Blotting</title>
     <style>
+         .content{
+            display: grid;
+            grid-template-columns: 60% 40%;
+        }
+
+        .title{
+            
+            text-align: left;
+            padding-left: 20%;
+        }
+
+        .title h1 {
+            color: var(--primary);
+            font-size: 6rem;
+            margin: 0;
+            margin-bottom: 2rem;
+            
+        }
+
+        .title p {
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+
+        .title-img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .title-img img {
+            width: 80%;
+            border: 0.1rem solid var(--secondary);
+            border-radius: 10px;
+        }
+
+        .zen-cards {
+            grid-column: 1 / -1;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 0;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card{
+            font-size: 1rem;
+            margin: 0;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            border-radius: 10px;
+            background-color: var(--bckgrnd);
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+            color: var(--text);
+            border: 0.1px solid var(--text);
+            height: 100%;
+            padding: 0.5rem;
+            max-width: 25%;
+
+        }
+
+        .card h2 {
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .card iframe{
+            border: 2px solid var(--secondary);
+            display: block;
+            max-width: 100%;
+            border-radius: 10px;
+            margin: auto;
+        }
+
         
     </style>
 </head>
@@ -31,7 +105,36 @@
             <button style="background-color: inherit; border: none; cursor: pointer;" onclick="change_darklight()"><img id="darklight" data="1" src="./images/moon.png" style="width: 45px;"></button>
         </div>
     </div>
-    <h1>Blotting</h1>
+
+    <div class="content">
+        <div class="title">
+                 <h1>Blotting</h1>
+                <p> Studying for long periods of time and/or relaxing for a long period of time can be a detrimental effect on the productivity of an individual. </p>
+                <p>That's why a technique called "Blotting" is so helpful, approaching studying in incremental loads will ease the stress and tension of the mind, and instead of cramming everything in a non-stop method, being able to manage information in smaller bits will allow for enhanced understanding and learning of this material.</p>
+        </div>
+        <div class="title-img">
+            <img src="./images/studying.jpg">
+        </div>
+    
+            <div class="zen-cards">
+            <div class="card">
+            <h2>Planning</h2>
+            <p>Planning is an important step in ensuring that blotting works. To efficiently blot, one needs to plan the load and duration of the segments of learning/resting. </p>
+            <iframe src="https://www.youtube.com/embed/PV_VhP61ono" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="card">
+            <h2>Breaks</h2>
+            <p>The ability to break efficiently is a skill that makes blotting even possible. Productive versus unproductive breaks lead to vastly different productivity levels at the end of ones studying session, and might even hinder the progress made.</p>
+            <iframe src="https://www.youtube.com/embed/z3kQIRtAv4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div class="card">
+            <h2>Nutrition</h2>
+            <p>During blotting, whether breaking or studying, it is important to remember that no matter which activity we are partaking in, we still are humans, and still need to fuel our bodies. Make sure to hydrate, and consume healthy snacks during the breaks, as to not physically and mentally where yourself out.</p>
+            <iframe src="https://www.youtube.com/embed/8XhaeoYZXOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+    </div>
     <div class="footer" style="grid-column: 1 / -1;">
         <div class="footer-text">
             <p>Website Made By: <a href="mailto:ocrosby@eastsideprep.org">Oliver Crosby</a>, <a href="mailto:jonetz@eastsideprep.org" class="creator">Jordan Netz</a>, <a href="mailto:ezheng@eastsideprep.org">Eddy Zheng</a> | <a href="#top">Scroll To Top</a></p>
