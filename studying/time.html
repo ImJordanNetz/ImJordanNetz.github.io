@@ -7,6 +7,116 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="./js/script.js" defer></script>
     <title>Time Management</title>
+    <style>
+.grid{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20% ;
+    grid-template-rows: 20% 20% 20% 20% 20% 20% 20% 20% ;
+}
+
+/*NEW FEATURE*/ 
+
+h1 {
+  grid-row: 3;
+  grid-column: 3;
+  top: 30px;
+  left: 0;
+  right: 0;
+  height: 50px;
+  z-index: 999;
+  animation: floatingheader 3s ease-in-out infinite;
+}
+
+@keyframes floatingheader {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.footer{
+    grid-row: 10;
+    grid-column: 7;
+
+}
+
+.two{
+    grid-row: 4;
+    grid-column: 2;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+    
+}
+
+.two div {
+    border-width:3px;
+    border-style:solid; 
+    font-size: 1.4rem;
+    border-color:#6060e0; padding: .5rem;
+}
+
+
+
+.three{
+    grid-row: 5;
+    grid-column: 4;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.three div {
+    border-width:3px;
+    border-style:solid; 
+    font-size: 1.4rem;
+    border-color:#60c2e0; padding: .5rem;
+
+}
+.four{
+    grid-row: 6;
+    grid-column: 1;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.four div {
+    border-width:3px;
+      font-size: 1.8rem;
+     border-style:solid; 
+     border-color:#d45151; padding: .5rem;
+}
+.five{
+    grid-row: 7;
+    grid-column: 5;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.five div{
+    font-size: 1.5rem;
+    border-width:3px;
+     border-style:solid; 
+     border-color:#c9baba; padding: .5rem;
+}
+/*NEW FEATURE*/ 
+p6{
+    writing-mode: vertical-rl;
+    grid-column: 1;
+    grid-row: 7 /span 3;
+}
+
+.link-list{
+    grid-row: 8;
+    grid-column: 3;
+    text-align: center;
+    font-size: 3rem;
+}
+
+    </style>
 </head>
 <body>
     <div id="trailer"></div>
@@ -28,12 +138,41 @@
             <button style="background-color: inherit; border: none; cursor: pointer;" onclick="change_darklight()"><img id="darklight" data="1" src="./images/moon.png" style="width: 45px;"></button>
         </div>
     </div>
-    <h1>Time Management</h1>
-    <div class="footer" style="grid-column: 1 / -1;">
-        <div class="footer-text">
-            <p>Website Made By: <a href="mailto:ocrosby@eastsideprep.org">Oliver Crosby</a> <a href="#top">Scroll To Top</a></p>
-        </div>
-    </div>
+    <h2 style="text-align: center; letter-spacing: 3rem; font-size: 2.5rem; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: var(--primary);">Time Management</h2>
     
 </body>
+
+<div class="grid">
+
+    <img src="images/time management double.png" alt="time management" style="align-items: center; width: 70rem; display: flex;">
+
+ <h1 style="text-align: center;">Time Management Tips:</h1>  
+ 
+<div class="two"><div><p2>Effective time management is essential for achieving success and happiness in both personal and professional life. By managing time efficiently, individuals can prioritize their tasks, avoid procrastination, and reduce stress levels.</p2></div></div>
+<div class="three"><div><p3>Prioritize your tasks: Make a list of all the tasks you need to complete and prioritize them based on their urgency and importance. Focus on completing the most important tasks first.</p3></div></div>
+<div class="four"><div><p4>Set goals: Set clear and specific goals for yourself, both short-term and long-term, to help you stay focused and motivated.</p4></div></div>
+<div class="five"><div><p5>Break tasks into smaller chunks: Break large tasks into smaller, more manageable chunks to make them easier to accomplish and avoid feeling overwhelmed.</p5></div></div>
+<p6 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; letter-spacing: 10px; font-size: 4rem;">Learn to focus!</p6>
+
+  
+
+    <div class="link-list">
+        <br>
+      <a href="https://mcgraw.princeton.edu/undergraduates/resources/resource-library/effective-time-management" target="_blank">Princeton</a>
+          <br>
+      <a href="https://www.mindtools.com/arb6j5a/what-is-time-management" target="_blank">Mind Tools</a>
+      <br>
+      <a href="https://students.dartmouth.edu/academic-skills/learning-resources/time-management-tips" target="_blank">Dartmouth</a>
+    </div>
+</div>
+  </div>
+  
+
+ <div class="footer" style="grid-column: 1 / -1;">
+    <div class="footer-text">
+        <p>Webpage Made By: <a href="mailto:ocrosby@eastsideprep.org">Oliver Crosby</a> <a href="#top">Scroll To Top</a></p>
+    </div>
+</div>
+
+</div>
 </html>
