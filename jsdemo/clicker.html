@@ -8,12 +8,38 @@
 </head>
 
 <style>
+    .split{
+        display: flex;
+        width: 100%;
+    }
+    .cookie-display{
+        width: 70%;
+        align-items: center;
+        text-align: center;
+    }
 
+    #shop {
+        width: 30%;
+        text-align: center;
+    }
+
+    .item{
+        width: 80%;
+        padding: 5px;
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: 80% 20%;
+        cursor: pointer;
+    }
+    .title{
+        text-align: left;
+    }
+    .item-count {
+        text-align: right;
+    }
 </style>
 
-<script>
 
-</script>
 
 <body>
     <!DOCTYPE html>
@@ -25,7 +51,89 @@
         <title>Clicker</title>
     </head>
     <body>
+        <div class="split">
+            <div class="cookie-display">
+                <h1 id="display">0 Cookies</h1>
+                <h2 id="cps"> 0 Cookies Per Second</h1>
+                <button onclick="addCookies(1)">Click Me!</button>
+            </div>
+            <div id="shop">
+                <h1>Buy Items</h1>
+                <div class="item" onclick="buy(0)">
+                    <div class="title">Clicker - Costs <span>10</span> Cookies</div>
+                    <div class="item-count">0</div>
+                </div>
+                <div class="item" onclick="buy(1)">
+                    <div class="title">Grandma - Costs <span>100</span> Cookies</div>
+                    <div class="item-count">0</div>
+                </div>
+                <div class="item" onclick="buy(2)">
+                    <div class="title">Farm - Costs <span>1000</span> Cookies</div>
+                    <div class="item-count">0</div>
+                </div>
+                <div class="item" onclick="buy(3)">
+                    <div class="title">Bank - Costs <span>20000</span> Cookies</div>
+                    <div class="item-count">0</div>
+                </div>
+            </div>
+        </div>   
         
+        
+        <script>
+
+            items = [
+                {
+                    "price": 10,
+                    "cps": 0.1
+                },
+                {  
+                    "price": 100,
+                    "cps": 1
+                },
+                {
+                    "price": 1000,
+                    "cps": 7
+                },
+                {
+                    "price": 2000,
+                    "cps": 30
+                }
+            ]
+
+            let itemInShop = document.getElementById("shop").querySelectorAll(".item");
+            console.log(itemInShop)
+            let countOfItems = Array.from(Array(itemInShop.length).keys());
+            let cookies = 0;
+            let cps = 0;
+            
+
+
+
+            function buy(num){
+                let item = items[num];
+                if (cookies >= item.price){
+                    addCookies(-item.price);
+                    item.price = Math.round(item.price * 1.1, 2);
+                    cps += item.cps;
+                    document.getElementById("cps").innerHTML = Math.round(cps*100)/100 + " Cookies Per Second";
+                    
+                    let itemInfo = itemInShop[num].querySelectorAll("div");
+                    itemInfo[0].querySelectorAll("span")[0].innerHTML = item.price;
+                    itemInfo[1].innerHTML = parseInt(itemInfo[1].innerHTML) + 1;
+                    
+                }
+            }
+            
+            
+            function addCookies(toAdd) {
+                cookies += toAdd;
+                document.getElementById("display").innerHTML = Math.round(cookies) + " Cookies";
+            }
+            
+            setInterval(function() {addCookies(Math.round(cps*100)/100)}, 1000);
+            
+            
+            </script>
     </body>
     </html>
 </body>
