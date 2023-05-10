@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Truths and a Lie</title>
+    <style>
+        .barrier{
+            margin-top: 30px;
+            width: 100%;
+            height: 2px;
+            color: black;
+            background-color: black;
+        }
+    </style>
+    <script src="./js/index.js" defer></script>
+</head>
+<body>
+
+    <h2>Who are you?</h2>
+    <form id="name-form">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value=""><br>
+        <label for="age">Age</label><br>
+        <input type="text" id="age" name="age" value=""><br>
+        <input type="button" value="Submit" onclick="greet()">
+    </form> 
+    <p id="greet"></p>
+
+    <div class="barrier"></div>
+
+    <h2>Which one cannot go bad</h2>
+    <form action="" id="trivia1">
+        <input type="radio" name = "trivia1" id="chocolate">
+        <label for="chocolate">Dark Chocolate</label><br>
+        <input type="radio" name = "trivia1" id="honey">
+        <label for="chocolate">Honey</label><br>
+        <input type="radio" name = "trivia1" id="tuna">
+        <label for="chocolate">Canned Tuna</label><br>
+        <input type="button" value="Submit" onclick="triviaOne()">
+
+    </form>
+
+    <p id="trivia1-ans"></p>
+
+    <div class="barrier"></div>
+    <h2>Two truths and a lie!s</h2>
+    <form action="" id="2truths">
+        <input type="radio" name = "2truths" id="dogs">
+        <label for="chocolate">I have 5 dogs</label><br>
+        <input type="radio" name = "2truhs" id="middle-name">
+        <label for="chocolate">My middle name is Mordekai</label><br>
+        <input type="radio" name = "2truhs" id="skating!">
+        <label for="chocolate">I took roller skating lessons for a year.</label><br>
+        <input type="button" value="Submit" onclick="triviaOne()">
+
+    </form>
+
+    <p id="trivia1-ans"></p>
+
+    
+</body>
+</html>
