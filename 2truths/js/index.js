@@ -44,7 +44,7 @@ function triviaOne(){
 
 function truthLieGame(){
     let ans = document.querySelectorAll("#truths input")
-    let ansText = document.getElementById("trivia1-ans");
+    let ansText = document.getElementById("trivia2-ans");
     console.log(ans);
     if (ans[1].checked){
         ansText.innerHTML = "That is correct! " + "I do not have a middle name!";
