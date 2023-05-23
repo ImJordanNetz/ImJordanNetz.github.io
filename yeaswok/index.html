@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Home</title>
+    <style>
+        .home-start{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            position: relative;
+            
+        }
+
+        .home-start::before{
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: url(./images/home-banner.jpg);
+            background-size: cover;
+            filter: grayscale(100%);
+        }
+
+        .home-start > button {
+            z-index: 1; 
+            border: none; 
+            background-color: var(--primary); 
+            padding: 1rem; 
+            font-size: 1.5rem;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="nav">
+            <div class="home-link">
+                <div><a href="index.html">Yea's Wok</a><div class="underline"></div></div>
+            </div>
+            <div class="center">
+                <ul class="navbar">
+                    <li><div><a href="#">Menu</a><div class="underline"></div></li>
+                    <li><div><a href="#">Order</a><div class="underline"></div></li>
+                    <li><div><a href="#">Time & Locations</a><div class="underline"></div></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="content-page">
+            <div class="home-start">
+                <button >Click Me!</button>
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+</body>
+</html>

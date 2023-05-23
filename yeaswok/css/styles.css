@@ -1,0 +1,117 @@
+@import url('https://use.typekit.net/amm8fsu.css');
+
+html{
+    scroll-behavior: smooth;
+    padding: 0;
+}
+
+:root{
+    /*NEW FEATURE: Using variables to allow for a dark/light mode switch*/
+    --text: #000000;
+    --bckgrnd: rgb(240, 240, 240);
+    --primary: #EE1C25;
+    --accent: #FFD700;
+    color: var(--text);
+    font-size: 1.8vw;
+
+}
+
+body{
+    background-color: var(--bckgrnd);
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "mr-eaves-modern", sans-serif;
+    
+}
+
+
+.extra-light {
+    font-weight: 400;
+}
+
+.medium {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 750;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.nav {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); /* Example text shadow */
+    z-index: 100;
+    width: 100%;
+    position: fixed;
+    top: 1rem;
+    left: 50vw;
+    translate: -50%;
+    display: grid;
+    font-size: 1.4rem;
+    grid-template-columns: 25% 50%
+
+
+}
+
+.nav > div {
+    display: flex;
+    flex-direction: row;
+    grid-row: 1;
+    align-items: center;
+}
+
+.nav a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.home-link {
+    justify-content: left;
+    display: flex;
+    padding-left: 25%;
+    flex-direction: row;
+}
+
+.center {
+    position: relative;
+    justify-content: center;
+}
+
+
+.navbar{
+    align-items: center;
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.navbar li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    transition: opacity 0.5s;
+    display: flex;
+    flex-direction: row;
+}
+
+/*NEW FEATURE :has psuedo class*/
+.navbar:has(li:hover) li:not(:hover) {
+    opacity: 0.5;
+}
+
+
+.underline{
+    width: 0%;
+    height: 0.1rem;
+    background-color: var(--accent);
+    transition: width 0.3s ease-in-out;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Example text shadow */
+}
+
+.navbar li:hover .underline, .home-link > div:hover .underline{
+    width: 100%;
+}
