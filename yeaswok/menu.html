@@ -8,6 +8,48 @@
     <title>Menu</title>
     <script src="./js/index.js" defer></script>
     <style>
+
+
+        .inner-image{
+            cursor: pointer;
+            padding-top: 0.2rem;
+            width: 8rem;
+            height: 12rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 130%;
+            transition: background-size 0.3s ease-in-out;
+            color: var(--accent);
+            box-shadow: rgba(50, 50, 93, 0.6) 0px 6px 12px -2px, rgba(0, 0, 0, 0.6) 0px 3px 7px -3px;
+        }
+        .inner-image:hover{
+            background-size: 110%;
+        }
+
+        .inner-image h1{
+            text-align: left;
+            font-size: 1.2rem;
+            font-weight: 300;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+            margin: 0;
+            margin-left: 5%;
+            margin-right: 5%;
+            
+        }
+
+        .items-list{
+            text-align: center;
+            width: 60%;
+            margin: auto;
+        }
+
+        .cards{
+            margin-top: 3vh;
+            display: grid;
+            place-items: center;
+            grid-template-columns: auto auto auto;
+        }
+
     </style>
 </head>
 <body>
@@ -24,12 +66,67 @@
                 </ul>
             </div>
         </div>
+
+
         <div style="padding-top: 5vh; color: black; margin: auto; font-size: 1.6rem;">
             <h1 style="font-weight: 500;">Menu</h1>
         </div>
-        <div class="footer">
-            Created By Jordan Netz - View original website <a href="https://yeaswok.com/" target="_blank">here</a>
-        </div>
 
+        <div class="items-list">
+            <div style="border-bottom: 0.1rem solid black;">
+                <h2 style="font-weight: 400; margin: 0;">Featured Items</h2>
+            </div>
+            <div class="cards">
+                    <div class="inner-image" style="background-image:
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0)),
+                    url('images/gtc.jpg');">
+                        <h1>General Tsao's Chicken</h1>
+                    </div>
+                    <div class="inner-image" style="background-image:
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0)),
+                    url('images/mongolianbeef.jpg');">
+                        <h1>Mongolian Beef</h1>
+                    </div>
+                <div class="food-card">
+                    <div class="inner-image" style="background-image:
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0)),
+                    url('images/Buddhas-Delight.jpg');">
+                        <h1>Buddhist Delight</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="items-list" style="margin-top: 10vh;">
+            <div style="border-bottom: 0.1rem solid black;">
+                <h2 style="font-weight: 400; margin: 0;">Other Items</h2>
+            </div>
+            <div class="cards">
+                <div class="food-card">
+                    <div class="inner-image" style="background-image:
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0)),
+                    url('images/chowmein.jpg');">
+                        <h1>Chow Mein</h1>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <div class="inner-image" style="background-image:
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0)),
+                    url('images/Kung-Pao-Tofu.jpg');">
+                        <h1>Kung Pao Tofu</h1>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <div class="inner-image" style="background-image:
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0)),
+                    url('images/sweet-and-sour-shrimp.jpg');">
+                        <h1>Sweet & Sour Shrimp</h1>
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+    <div class="footer">
+        Created By Jordan Netz - View Original Website <a href="https://yeaswok.com/" target="_blank">Here</a>
     </div>
 </body>
