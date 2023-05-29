@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Locations</title>
+    <script src="./js/index.js" defer></script>
+    <style>
+        .content{
+            display: grid;
+            grid-template-columns: 49.5% 0.15% 50%;
+        }
+
+        iframe {
+            margin-left: 1rem;
+            border: 0.08rem solid var(--primary);
+            border-radius: 0.5rem;
+            width: 25rem;
+            height: 100%;
+        }
+
+        .information {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .information div:not(:last-child){
+
+            border-bottom: 1px solid #000000;
+
+        }
+
+        .information > div{
+            padding: 0.4rem;
+            margin-right: 1rem;
+            align-items: left;
+            width: 70%;
+        }
+
+        .information > div h2 {
+            font-weight: 450;
+            margin: 0;
+        }
+
+        .information > div p {
+            font-size: 0.7rem;
+        }
+
+        .information table {
+            font-size: 0.6rem;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .information th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="nav">
+            <div class="home-link">
+                <div><a href="index.html">Yea's Wok</a><div class="underline"></div></div>
+            </div>
+            <div class="center">
+                <ul class="navbar">
+                    <li><div><a href="menu.html">Menu</a><div class="underline"></div></li>
+                    <li><div><a href="order.html">Order</a><div class="underline"></div></li>
+                    <li><div><a href="locations.html">Time & Locations</a><div class="underline"></div></li>
+                </ul>
+            </div>
+        </div>
+        <div style="padding-top: 5vh; color: black; margin: auto; font-size: 1.6rem;">
+            <h1 style="font-weight: 500;">Time & Location</h1>
+        </div>
+        <div class="content">
+            <div class="information">
+                <div>
+                    <h2>Where</h2>
+                    <p>6969 Coal Creek Pkwy SE, Newcastle, WA 98059</p>
+                </div>
+                <div>
+                    <h2>When</h2>
+                    <table>
+                        <tr>
+                            <th>Day</th>
+                            <th>Breakfast</th>
+                            <th>Lunch</th>
+                            <th>Dinner</th>
+                        </tr>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Closed</td>
+                            <td>Closed</td>
+                            <td>Closed</td>
+                        </tr>
+                        <tr>
+                            <td>Tue ~ Thur</td>
+                            <td>11:30 - 2:45 PM</td>
+                            <td>2:45 - 5 PM</td>
+                            <td>5:00 - 8:30 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Fri ~ Sat</td>
+                            <td>11:30 - 2:45 PM</td>
+                            <td>2:45 - 4 PM</td>
+                            <td>4 - 9 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>11:30 - 2:45 PM</td>
+                            <td>2:45 - 4 PM</td>
+                            <td>4 - 8:30 PM</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2>How</h2>
+                    <p>Create a reservation <a href="order.html" style="color: var(--primary);">here</a> or come to our restraunt!</p>
+                </div>
+            </div>
+            <div class="bar" style="height: 100%; background-color: black;"></div>
+            <div class="location">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d172236.40129037356!2d-122.194748!3d47.583473!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490691eecbf5c5b%3A0xf6f60c0658239e30!2sYea&#39;s%20Wok!5e0!3m2!1sen!2sus!4v1685348507218!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <div class="footer">
+            Created By Jordan Netz - View original website <a href="https://yeaswok.com/" target="_blank">here</a>
+        </div>
+
+    </div>
+</body>

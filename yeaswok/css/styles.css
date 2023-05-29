@@ -15,6 +15,11 @@ html{
 
 }
 
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
 body{
     background-color: var(--bckgrnd);
     padding: 0;
@@ -55,6 +60,11 @@ body{
     grid-template-columns: 25% 50%
 
 
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 100%;
 }
 
 .nav > div {
@@ -114,4 +124,10 @@ body{
 
 .navbar li:hover .underline, .home-link > div:hover .underline{
     width: 100%;
+}
+
+.footer{
+    background-color: var(--primary);
+    padding: 0.5rem;
+    margin-top: 1rem;
 }
