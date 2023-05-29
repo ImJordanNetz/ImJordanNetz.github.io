@@ -19,6 +19,7 @@ body{
     background-color: var(--bckgrnd);
     padding: 0;
     margin: 0;
+    background-color: #EEEEEE;
     overflow-x: hidden;
     font-family: "elza-text", sans-serif;
     
