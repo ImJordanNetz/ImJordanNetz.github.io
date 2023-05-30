@@ -68,10 +68,12 @@
             width: fit-content;
             text-align: right;
             font-family: "elza-text", sans-serif;
+            font-size: 1rem;
         }
 
         .form-item input:focus{
             outline: none;
+
         }
 
 
@@ -168,7 +170,7 @@
 
                     <div class="form-item">
                         <label for="datetime">Time</label>
-                        <input type="datetime-local" id="datetime" name="datetime" value="2023-01-01T00:00" /> 
+                        <input type="datetime-local" id="datetime" name="datetime"/> 
                     </div>
                     <div class="submit-button">
                         <input type="button" value="Create Reservation" onclick="createReservation()">
