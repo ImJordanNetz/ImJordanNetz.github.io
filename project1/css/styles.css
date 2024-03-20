@@ -24,34 +24,37 @@ nav ul {
     position: absolute;
     opacity: 0;
     transition: opacity 0.3s ease;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   
   nav ul li a:before {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M5,0 L10,5 L5,10 L0,5 Z" fill="black"/></svg>');
+    background-image: url('../images/arrow.png');
     transform: rotate(45deg);
     left: -15px;
     top: 2px;
   }
   
   nav ul li a:after {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M5,0 L10,5 L5,10 L0,5 Z" fill="black"/></svg>');
+    background-image: url('../images/arrow.png');
     transform: rotate(-45deg);
     right: -15px;
     top: 2px;
   }
   
   nav ul li a span:before {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M5,0 L10,5 L5,10 L0,5 Z" fill="black"/></svg>');
+    background-image: url('../images/arrow.png');
     transform: rotate(-45deg);
     left: -15px;
     bottom: 2px;
   }
   
   nav ul li a span:after {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M5,0 L10,5 L5,10 L0,5 Z" fill="black"/></svg>');
+    background-image: url('../images/arrow.png');
     transform: rotate(45deg);
-    position: relative;
-    right: -100px;
+    right: -15px;
     bottom: 2px;
   }
   
