@@ -1,0 +1,202 @@
+
+<!-- STEP ONE -->
+<!-- Build out new project with proper folders and files.  In new index.html: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarke | Pseudo Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Web 2!</h1>
+        <h4>Today, we will mess with some Pseudo Classes and Elements</h4>
+    </div>
+</body>
+</html>
+<!-- In style.css: -->
+<style>
+    /* Start with basic page style */
+    body {
+        background: gray;
+        /* Add default global font */
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    /* Tweak Header font family */
+    h1, h2, h4 {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /* Further alter H4 font sizes */
+    h4 {
+        font-size: 20px;
+    }
+    .container {
+        margin: 0 auto;
+        width: 1000px;
+        background: white;
+        padding: 20px;
+    }
+</style>
+<!-- STEP TWO -->
+<!-- Define CSS and CSS combinators. In index.html  -->
+<h2>Lets first dive deeper into CSS</h2>
+<p>If we think of CSS in terms of sectors, properties and values, then a typical CSS entry would like like this:</p>
+<pre>
+    <code>
+        selector {property: value;}
+    </code>
+</pre>
+<p>To style the above, we need to add two tags together.  We call this CSS Combinators</p>
+<!-- In style.css: -->
+<style>
+    /* CSS Combinators are calling on an element by calling on its ancestor first.  */
+    pre code {
+        background-color: #eee;
+        border: 1px solid #999;
+        display: block;
+        padding: 20px;
+        color: black;
+    }
+</style>
+<!-- STEP THREE -->
+<!-- Define CSS Pseudo Classes.  In index.html: -->
+<h2>What are Pseudo Classes?</h2>
+<p>Again, if we think of CSS in terms of selectors, properties and values, then a pseudo class is an add-on to a selector.</p>
+<p>A typical CSS entry calling on a Pseudo Class would look like this:</p>
+<pre>
+    <code>selector:pseudo_class {property: value;}</code>
+</pre>
+<!-- Demo changing a link color the way we already know -->
+<h4>We use them for Links</h4>
+<p>If we want our <a href="#">link</a> to look different, we can simply add it in my css as follows:</p>
+<pre>
+    <code>a {color: red;}</code>
+</pre>
+<style>
+    a {
+        color: red;
+    }
+</style>
+<!-- Now Demo how we can change link depending on state and using Pseudo Classes -->
+<p>But, if we want each of our <a href="#">link states</a> to look different then we will use a pseudo class like:</p>
+<ul>
+    <li>:visited</li>
+    <li>:hover</li>
+    <li>:active</li>
+</ul>
+<!-- In style.css: -->
+<style>
+/* unvisited link */
+a:link {
+    color: red;
+}
+/* visited link */
+a:visited {
+    color: green;
+}
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+/* selected link */
+a:active {
+    color: blue;
+}
+</style>
+<!-- Explain the above will alter all links, but we can still alter just one link.  In index.html: -->
+<p>But, we can also make a <a class="special" href="#">new link</a> look different.</p>
+<!-- In style.css: -->
+<style>
+a.special {
+    color: orange;
+}
+</style>
+<!-- Can even do it to div's.  In index.html -->
+<h4>We can use Pseudo Classes on any tag.</h4>
+<div id="hover-div">
+    <p>Here we will add a hover to our div</p>
+    <p>What do you think?</p>
+</div>
+<!-- In style.css -->
+<style>
+#hover-div {
+    color: white;
+    background-color: blue;
+    padding: 10px;
+}
+#hover-div:hover {
+    background-color: black;
+}
+</style>
+<!-- Can even add it to first and last child. First and last child has to do with first and last showing of a tag.  In index.html -->
+<h4>We can even even call on specific selectors depending on their hierarchy.</h4>
+<p>Style will change above.</p>
+<!-- In style.css -->
+<style>
+p:first-child {
+    color: red;
+}
+p:last-child {
+    font-weight: bold;
+}
+/* or */
+#hover-div p:first-child {
+    color: red;
+}
+#hover-div p:last-child {
+    font-weight: bold;
+}
+</style>
+<!-- Add a hidden element using pseudo. In index.html -->
+<div id="tooltip">
+    <h4>You can even create quick and easy tooltips</h4>
+    <p>This is your hidden text</p>
+</div>
+<!-- In style.css -->
+<style>
+#tooltip p {
+    display: none;
+    background-color: yellow;
+    padding: 10px;
+}
+#tooltip:hover p {
+    display: block;
+}
+</style>
+<!-- STEP FOUR -->
+<hr>
+<!-- in index.html -->
+<h2>What are Pseudo Elements?</h2>
+<p id="pseudo-elements">Again, if we think of pseudo classes as add-ons, then we can think of pseudo elements as creating new elements from a selector.</p>
+<!-- in style.css -->
+<ul class="list">
+    <li>This is an odd iten</li>
+    <li>this is an even item</li>
+    <li>these will keep flipping colors</li>
+    <li>due to the nth-child pseudo element</li>
+    <li>due to the nth-child pseudo element</li>
+    <li>due to the nth-child pseudo element</li>
+    <li>due to the nth-child pseudo element</li>
+    <li>due to the nth-child pseudo element</li>
+</ul>
+<style>
+#pseudo-elements::first-letter {
+    color: red;
+}
+#pseudo-elements::before {
+    content: "READ THIS: ";
+    font-weight: bold;
+}
+#pseudo-elements::after {
+    content: " - REMEMBER THIS";
+    font-weight: bold;
+}
+.list li:nth-child(even){
+    color: skyblue;
+}
+.list li:nth-child(odd){
+    color: red;
+}
+</style>
