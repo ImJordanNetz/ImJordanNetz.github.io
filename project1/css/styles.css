@@ -1,66 +1,35 @@
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #333;
-    padding: 5px 10px;
-    position: relative;
-  }
-  
-  nav ul li a:before,
-  nav ul li a:after,
-  nav ul li a span:before,
-  nav ul li a span:after {
-    content: "";
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    width: 20px;
-    height: 20px;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  nav ul li a:before {
-    background-image: url('../images/arrow.png');
-    transform: rotate(45deg);
-    left: -15px;
-    top: 2px;
-  }
-  
-  nav ul li a:after {
-    background-image: url('../images/arrow.png');
-    transform: rotate(-45deg);
-    right: -15px;
-    top: 2px;
-  }
-  
-  nav ul li a span:before {
-    background-image: url('../images/arrow.png');
-    transform: rotate(-45deg);
-    left: -15px;
-    bottom: 2px;
-  }
-  
-  nav ul li a span:after {
-    background-image: url('../images/arrow.png');
-    transform: rotate(45deg);
-    right: -15px;
-    bottom: 2px;
-  }
-  
-  nav ul li a:hover:before,
-  nav ul li a:hover:after,
-  nav ul li a:hover span:before,
-  nav ul li a:hover span:after {
-    opacity: 1;
-  }
+.container {
+  display: grid;
+}
+
+@import url("https://use.typekit.net/qva7qoz.css");
+.headings {
+  font-family: "silver-streak-variable", sans-serif;
+  font-variation-settings: "wght" 400, "wdth" 100;
+}
+
+.nav {
+  display: flex; /* Changed from grid to flex for better control */
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  align-items: center;
+}
+
+.nav-item.logo {
+  flex-grow: 1; /* Ensures it takes up space pushing others to center */
+}
+
+.nav-links {
+  display: flex; /* Makes the three links align in a row */
+  justify-content: center; /* Centers the links */
+  flex-grow: 2; /* Allows it to take more space pushing the logo to the left */
+}
+
+.nav-item a {
+  font-size: 3em;
+  color: #d21272;
+  text-decoration: none;
+  margin: 0 20px; /* Gives space between the links */
+}
