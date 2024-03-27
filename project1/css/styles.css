@@ -1,6 +1,22 @@
+html, body {margin: 0; overflow-x: hidden; height: 100%;}
+
+:root {
+  --headings: #d21272;
+}
+
 .container {
   display: grid;
+  grid-template-columns: 1fr;
+  font-size: 1vw;
 }
+
+.grid-item {
+  margin: 0;
+  width: 100%; /* Each grid item takes the full width */
+  background-color: white;
+  box-sizing: border-box; 
+}
+
 
 @import url("https://use.typekit.net/qva7qoz.css");
 .headings {
@@ -9,27 +25,102 @@
 }
 
 .nav {
-  display: flex; /* Changed from grid to flex for better control */
-  font-size: 1.1rem;
+  display: flex;
+  font-size:1.5em;
   margin-top: 1rem;
   margin-left: 2rem;
   margin-right: 2rem;
   align-items: center;
+;
 }
 
 .nav-item.logo {
-  flex-grow: 1; /* Ensures it takes up space pushing others to center */
+  flex-grow: 1; 
 }
 
 .nav-links {
-  display: flex; /* Makes the three links align in a row */
-  justify-content: center; /* Centers the links */
-  flex-grow: 2; /* Allows it to take more space pushing the logo to the left */
+  display: flex; 
+  justify-content: center;
+  flex-grow: 2; 
 }
 
 .nav-item a {
+
   font-size: 3em;
   color: #d21272;
   text-decoration: none;
   margin: 0 20px; /* Gives space between the links */
 }
+
+.nav-item .arrow {
+  position: relative; 
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item .arrow img {
+  animation: pulse 3s infinite ease-in-out; /* Apply pulse animation */
+  width: 100px;
+  display: block;
+  position: absolute;
+  
+
+}
+
+.nav-item .arrow {
+  position: absolute;
+  display: block;
+  opacity: 0; /* Start fully transparent */
+  transform-origin: center center;
+  transition: opacity 0.3s ease;
+}
+
+.nav-item:has(a:hover) .arrow {
+  opacity: 1;
+}
+
+/* spent 2 hours on this :))))))))) */
+.nav-item.logo .arrow:nth-child(2) { transform: translate(8vw, 9vh) rotate(-90deg); }
+.nav-item.logo .arrow:nth-child(3) { transform: translate(17vw, 6vh) rotate(-100deg); }
+.nav-item.logo .arrow:nth-child(4) { transform: translate(25vw, 10vh) rotate(-110deg); }
+.nav-item.logo .arrow:nth-child(5) { transform: translate(33vw, 4vh) rotate(-125deg); }
+.nav-item.logo .arrow:nth-child(6) { transform: translate(35vw, -2vh) rotate(-180deg); }
+.nav-item.logo .arrow:nth-child(7) { transform: translate(24vw, -14vh) rotate(90deg); }
+.nav-item.logo .arrow:nth-child(8) { transform: translate(13vw, -15vh) rotate(90deg); }
+.nav-item.logo .arrow:nth-child(9) { transform: translate(2vw, 1vw) rotate(-60deg); }
+
+.nav-item.songs .arrow:nth-child(2) { transform: translate(3vw, 5vh) rotate(-70deg); }
+.nav-item.songs .arrow:nth-child(3) { transform: translate(10vw, 3vh) rotate(-90deg); }
+.nav-item.songs .arrow:nth-child(4) { transform: translate(14vw, 2vh) rotate(-130deg); }
+.nav-item.songs .arrow:nth-child(5) { transform: translate(15vw, -11vh) rotate(110deg); }
+.nav-item.songs .arrow:nth-child(6) { transform: translate(16vw, -2vh) rotate(-180deg); }
+.nav-item.songs .arrow:nth-child(7) { transform: translate(9vw, -14vh) rotate(90deg); }
+.nav-item.songs .arrow:nth-child(8) { transform: translate(0vw, -10vh) rotate(30deg); }
+.nav-item.songs .arrow:nth-child(9) { transform: translate(-2vw, 0vw) rotate(-40deg); }
+
+.nav-item.concerts .arrow:nth-child(2) { transform: translate(3vw, 7vh) rotate(-70deg); }
+.nav-item.concerts .arrow:nth-child(3) { transform: translate(11vw, 4vh) rotate(-90deg); }
+.nav-item.concerts .arrow:nth-child(4) { transform: translate(15vw, 3vh) rotate(-130deg); }
+.nav-item.concerts .arrow:nth-child(5) { transform: translate(16vw, -11vh) rotate(110deg); }
+.nav-item.concerts .arrow:nth-child(6) { transform: translate(22vw, -2vh) rotate(-180deg); }
+.nav-item.concerts .arrow:nth-child(7) { transform: translate(9vw, -14vh) rotate(90deg); }
+.nav-item.concerts .arrow:nth-child(8) { transform: translate(0vw, -10vh) rotate(30deg); }
+.nav-item.concerts .arrow:nth-child(9) { transform: translate(-2vw, 0vw) rotate(-40deg); }
+
+/* Pulse keyframes */
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.2); }
+}
+
+.nav-item .arrow:nth-child(2)  img {width: 4em;}
+.nav-item .arrow:nth-child(3)  img {width: 4.4em}
+.nav-item .arrow:nth-child(4)  img {width: 3.6em}
+.nav-item .arrow:nth-child(5)  img {width: 4em}
+.nav-item .arrow:nth-child(6)  img {width: 4.4em}
+.nav-item .arrow:nth-child(7)  img {width: 4em}
+.nav-item .arrow:nth-child(8)  img {width: 3.6em}
+.nav-item .arrow:nth-child(9)  img {width: 4em}
+
