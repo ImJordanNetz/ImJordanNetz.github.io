@@ -1,0 +1,155 @@
+body{
+    background-color: #d9e2eb;
+    margin: 0;
+    padding: 0;
+
+}
+
+:root{
+    font-size: 0.5vw;
+    font-family: "new-science", sans-serif;
+}
+
+.underline{
+    width: 0;
+    height: 0.3vh;
+    background-color: #121212;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-item:has(.nav-text:hover) .underline{
+    width: 100%;
+}
+
+.nav-text{
+    margin-top: 4rem;
+
+}
+
+.reg {
+    font-family: "new-science", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bold {
+    font-family: "new-science", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+nav{
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 15% 35% 50%;
+}
+
+nav .nav-buckets{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item{
+    font-size: 3rem;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    height: 100%;
+
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+#logo img {
+    height: 10rem;
+}
+
+.main-page{
+    display: flex;
+    padding-top: 13vh;
+    margin-top: 1vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.left{
+    display: grid;
+}
+
+.right{
+    padding: 3vw;
+    display: grid;
+    place-content: center;
+    background-image: radial-gradient(black 1.5px, transparent 0);
+    background-size: 30px 30px;
+    background-position: -19px -19px;
+}
+
+
+#floating-image {
+    border: 1px solid #6b8aa8;
+    border-radius: 1.5%;
+    width: 100%;
+    height: 50vh;
+  }
+
+.main-page-text{
+    place-self: center;
+    display: flex;
+    justify-content: end;
+}
+
+.main-page-text-container p {
+    max-width: 100%;
+    word-wrap: break-word;
+    font-size: 2.5rem; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+.main-page-text-container{
+    max-width: 54%;
+}
+
+.grad{
+    font-size: 72px;
+    background: -webkit-linear-gradient(0deg, rgba(184,20,189,1) 35%, rgba(255,0,14,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.pop-out-button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 12vh; 
+}
+
+.pop-out-button {
+    border: 2px solid #6b8aa8;
+    font-size: 4rem;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translate(-0px, -5px);
+    box-shadow: 0 5px 5px rgb(107, 138, 168, 1);
+  }
+  
+  .pop-out-button:hover {
+    transform: translate(-0px, -0px);
+    box-shadow: none
+  }
+
