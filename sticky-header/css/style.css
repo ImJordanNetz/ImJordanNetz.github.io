@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: grey;
+}
+
+h1{
+    font-size: 5vw;
+}
+
+h2{
+    font-size: 2vw;
+}
+
+h3{
+    font-size: 1.8vw
+
+}
+
+p, a {
+    font-size: 1.6vw;
+}
+
+.container {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.header{
+    background-color: darkgray;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.left{
+    float: left;
+    width: 20%;
+}
+
+.active {
+    background-color: antiquewhite;
+}
+
+.side-nav a{
+    background-color: darkgray;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.main{
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+}
+.right {
+    float: left;
+    width: 20%;
+    color: white;
+    background-color: darkgray;
+    padding: 15px;
+}
+
+.footer{
+    background-color: darkgray  ;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    clear: both;
+}
+footer{
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+.nav {
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+
+}
+
+.nav-inner{
+    float: left;
+    width: 100%;
+}
+
+.logo{
+    float: left;
+    width: 30%;
+    padding-left: 40px;
+}
+
+.nav-inner nav {
+    float: left;
+    width: 70%;
+    text-align: right;
+    padding: 22px 40px;
+    position: sticky;
+    top: 0px;
+    
+}
+
+.nav-inner nav a {
+    color: #565656;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+.nav-inner nav a:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+@media (min-width: 621px) and (max-width: 1000px){
+    .main {
+        width: 80%;
+    }
+    .left, .right{
+        width: 10%;
+    }
+}
+
+@media only screen and (max-width: 620px){
+    .left, .main, .right{
+        width: 100%;
+    }
+}
