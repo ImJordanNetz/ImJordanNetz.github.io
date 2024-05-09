@@ -151,7 +151,72 @@ body {
     margin: 0;
 }
 
-@media (max-width:1000px) {
+
+
+
+
+/* PAGE 2 */
+
+.section-title{
+
+    font-size: 2.5em;
+    margin: 0;
+    margin-top: 0.2em;
+    font-weight: 600;
+    margin-left: 15%;
+}
+
+.side-scroll-container{
+    display: flex;
+    overflow-x:scroll;
+    padding-left: 15vw;
+    scroll-padding-left: 0; /* GPTed these couple of lines: Adjust scroll snap starting point */
+    scroll-snap-type: x mandatory; /*Optional: enables snapping behavior*/
+    -ms-overflow-style: none; /*Hide scrollbar in IE and Edge*/
+    scrollbar-width: none;
+    margin-bottom: 10vh;
+}
+
+.image-card{
+    min-width: 250px;
+    width: 250px;
+    height: 70vh;
+    margin-right: 0.7em;
+    border-radius: 30px;
+    background-size: 350%; 
+    padding: 0.5em;
+    background-position: center;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+.big-image-card {
+    width: 70%;
+    margin: auto;
+    border-radius: 30px;
+    height: 70vh;
+    background-size: 150%; 
+    padding-left: 3em;
+    background-position: center;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.big-image-text-container {
+    max-width: 30%;
+}
+
+.big-image-text-container h2{
+    font-size: 2em;
+    margin: 0;
+}
+
+
+
+
+@media (max-width:700px) {
     body{
         font-size: 5vw;
     }
@@ -220,6 +285,51 @@ body {
     }
     
     .image-backdrop h1, .image-backdrop p {
+        margin: 0;
+    }
+
+    .section-title{
+
+        font-size: 2em;
+        margin-top: 0.2em;
+        text-align: center;
+        margin: auto;
+    }
+    
+    
+    .image-card{
+        min-width: 250px;
+        width: 250px;
+        height: 70vh;
+        margin-right: 0.7em;
+        border-radius: 30px;
+        background-size: 350%; 
+        padding: 0.5em;
+        background-position: center;
+        box-sizing: border-box;
+        background-repeat: no-repeat;
+    }
+
+    .big-image-card {
+        width: 90%;
+        margin: auto;
+        border-radius: 30px;
+        height: 70vh;
+        background-size: 200%; 
+        padding-left: 0;
+        align-items: normal;
+        justify-content: center;
+        padding-top: 2em;
+    }
+    
+    .big-image-text-container {
+        text-align: center;
+        max-width: fit-content;
+    }
+    
+    .big-image-text-container h2{
+        font-size: 2em;
+
         margin: 0;
     }
 
