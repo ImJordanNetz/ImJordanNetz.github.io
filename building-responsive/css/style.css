@@ -178,8 +178,8 @@ body {
 }
 
 .image-card{
-    min-width: 250px;
-    width: 250px;
+    min-width: max(250px, 20vw);
+    width: max(250px, 20vw);
     height: 70vh;
     margin-right: 0.7em;
     border-radius: 30px;
@@ -303,7 +303,7 @@ body {
         height: 70vh;
         margin-right: 0.7em;
         border-radius: 30px;
-        background-size: 350%; 
+        background-size: 400%; 
         padding: 0.5em;
         background-position: center;
         box-sizing: border-box;
@@ -315,7 +315,7 @@ body {
         margin: auto;
         border-radius: 30px;
         height: 70vh;
-        background-size: 200%; 
+        background-size: 250%; 
         padding-left: 0;
         align-items: normal;
         justify-content: center;
