@@ -89,6 +89,60 @@ body, html {
     font-weight: 600;
 }
 
+#menu-toggle {
+    display: none;
+  }
+
+.menu-button-container {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+
+  .menu-button {
+    transform: translateX(-50%);
+  }
+
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+  
+
+
 .page-title{
 
     font-size: 4em;
@@ -290,35 +344,67 @@ body, html {
         width: 100%;
         justify-content: center;
     }
-
     
-    .nav > nav{
+    .nav >nav {
+        height: 3vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav > nav .big, .nav > nav .small{
+        display: none;
+    }
+
+    .menu-button-container {
+        display: flex;
+    }
+    .menu {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        position: absolute;
+        top: 0;
+        margin-top: 3vh;
+        left: 0;
+        flex-direction: column;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+      }
+      #menu-toggle ~ .menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        display: none;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+
+      #menu-toggle:checked ~ .menu li {
+        border: 1px solid #333;
+        height: 2.5em;
+        display: flex;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      .menu > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
         width: 100%;
-    }
+        color: white;
+        background-color: #222;
+      }
+      .menu > li:not(:last-child) {
+        border-bottom: 1px solid #444;
+      }   
 
-    .nav > nav > a {
-        font-size: 1em;
 
-    }
-    
-    .nav > nav > .big {
-        font-size: 1.5em;
-
-    }
-    
-    /* Changes .big to smaller size and lighter weight when any .small is hovered */
-    .nav > nav:has(.small:hover) > .big {
-        font-size: 1em;
-        font-weight: normal;
-    }
-    
-    .nav > nav > a:hover {
-        font-size: 1.5em;
-    }
 
     .card {
         width: 80%;
-        height: 33vh;
+        height: fit-content;
     }
     
     .home-landing{
@@ -328,7 +414,7 @@ body, html {
     .image-backdrop{
         height: 100vh;
         width: 100vw;
-        background-size: 200%; 
+        background-size: cover; 
         background-position: center;
         box-sizing: border-box;
         position: relative;
@@ -447,5 +533,4 @@ body, html {
         margin: 0;
     }
     
-
 }
