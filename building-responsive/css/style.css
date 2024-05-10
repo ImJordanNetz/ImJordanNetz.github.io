@@ -7,7 +7,30 @@
 
 }
 
-body {
+
+/* Found code to edit scroll. Doing this so I can have a good sideways scroll */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: gray var(--dark); /* thumb and track color */
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px; /* width of the entire scrollbar */
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--dark); /* color of the track (part the thumb slides within) */
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: gray; /* color of the thumb itself */
+    border-radius: 20px; /* roundness of the scrollbar thumb */
+  }
+  
+
+body, html {
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     background-color: var(--dark);
@@ -139,7 +162,6 @@ body {
     background-repeat: no-repeat;
 }
 
-
 .image-backdrop-text{
     margin: auto;
     padding-top: 3vh;
@@ -167,14 +189,13 @@ body {
 }
 
 .side-scroll-container{
+    padding-bottom: 2em;
     display: flex;
     overflow-x:scroll;
     padding-left: 15vw;
-    scroll-padding-left: 0; /* GPTed these couple of lines: Adjust scroll snap starting point */
-    scroll-snap-type: x mandatory; /*Optional: enables snapping behavior*/
-    -ms-overflow-style: none; /*Hide scrollbar in IE and Edge*/
-    scrollbar-width: none;
     margin-bottom: 10vh;
+
+
 }
 
 .image-card{
@@ -213,6 +234,44 @@ body {
     margin: 0;
 }
 
+
+.about-us-container{
+    width: 70vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
+}
+
+.about-us-item {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0.6em;
+    justify-content: space-between;
+    
+}
+
+.profile-photo{
+    width: 70%;
+    background-position: center;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    aspect-ratio:  1 / 1;
+    border: 1px solid white;
+}
+
+.about-us-text {
+    margin-top: 10vh;
+    text-align: center;
+}
+
+.about-us-text * {
+    margin: 0;
+}
 
 
 
@@ -332,5 +391,61 @@ body {
 
         margin: 0;
     }
+
+    .about-us-container{
+        width: 70vw;
+
+        max-height: fit-content;
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-us-item {
+        width: 80vw;
+        height: fit-content;
+        max-height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        padding: 0.6em;
+        justify-content: space-between;
+        margin-bottom: 10vh;
+        
+    }
+    
+    .profile-photo{
+
+        width: 60%;
+        background-position: center;
+        background-size: 150%;
+        background-repeat: no-repeat;
+        border-radius: 100%;
+        aspect-ratio:  1 / 1;
+        border: 1px solid white;
+    }
+    
+    .about-us-text {
+        margin-top: 2vh;
+        text-align: center;
+    }
+    
+    .about-us-text h2 {
+        font-size: 2em;
+    }
+
+    .about-us-text h3 {
+        font-size: 1em;
+    }
+
+    .about-us-text p {
+        font-size: 0.7em;
+    }
+
+    .about-us-text * {
+        margin: 0;
+    }
+    
 
 }
