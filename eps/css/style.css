@@ -1,0 +1,222 @@
+:root {
+    --primary: rgb(0,70,127);
+    --secondary: rgb(236, 169, 0);
+    font-size: 100%;
+    font-family: "indivisible", sans-serif;
+    font-weight: 400;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.semibold {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: auto;
+    width: 90%;
+    padding: 1rem;
+    height: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+#logo-container {
+    justify-content: left;
+}
+
+#middle-section {
+    justify-content: center;
+}
+
+#right-section {
+    justify-content: right;
+}
+
+.nav-section {
+    display: flex;
+}
+
+.nav-link-wrapper {
+    margin: 0 2vw;
+}
+
+.nav-link-wrapper .hover-underline {
+    width: 0%;
+    background-color: black;
+    height: 2px;
+    transition: width 0.3s;
+    float: right;
+}
+
+.nav-link-wrapper:has(a:hover) .hover-underline {
+    margin-bottom: 0px;
+    width: 100%;
+    float: left;
+}
+
+.home-landing {
+    width: 90%;
+    margin: auto;
+    height: 80vh;
+    background-size: cover;
+    background-position: 0%;
+    background-image: url(../images/tali.jpg);
+    background-color: rgba(0, 0, 0, 0.4); 
+    background-blend-mode: darken;
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.8) 0px 7px 29px 0px;}
+
+.outer-text-wrapper {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.inner-text-wrapper {
+    margin-top: auto;
+}
+
+.normal-text {
+    font-size: 2rem; /* Smaller size for normal text */
+    color: white;
+    font-weight: 400;
+    bottom: 0;
+    
+}
+
+#upward-slide {
+    display: inline-block;
+    overflow: hidden;
+    height: 7.2em; /* Adjust height for larger font-size */
+    line-height: 6em; /* Ensure consistent line height */
+    vertical-align: middle;
+}
+
+.upward-slide-container h2{
+    margin: 0 1em;
+    font-size: 6em; /* Larger font-size */
+    display: block;
+    height: 1.2em; /* Match the height set in #upward-slide */
+    animation: slide-up 8s linear infinite;
+    line-height: 1em; /* Match line height for proper alignment */
+    font-family: "gelato-fresco-variable", sans-serif;
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(0);
+        animation-timing-function: ease-in-out;
+    }
+    20% {
+        transform: translateY(0);
+        animation-timing-function: ease-in-out;
+    }
+    25% {
+        transform: translateY(-1.2em); /* Adjust for larger font-size */
+        animation-timing-function: ease-in-out;
+    }
+    45% {
+        transform: translateY(-1.2em); /* Adjust for larger font-size */
+        animation-timing-function: ease-in-out;
+    }
+    50% {
+        transform: translateY(-2.4em); /* Adjust for larger font-size */
+        animation-timing-function: ease-in-out;
+    }
+    70% {
+        transform: translateY(-2.4em); /* Adjust for larger font-size */
+        animation-timing-function: ease-in-out;
+    }
+    75% {
+        transform: translateY(-3.6em); /* Adjust for larger font-size */
+        animation-timing-function: ease-in-out;
+    }
+    95% {
+        transform: translateY(-3.6em); /* Adjust for larger font-size */
+        animation-timing-function: ease-in-out;
+    }
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-in-out;
+    }
+}
+
+.home-button-wrapper {
+    height: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.learn-more-button {
+    height: 4rem;
+    width: fit-content;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+}
+
+
+.learn-more-button:hover {
+    border-radius: 5px;
+}
+
+
+.main-content-container {
+    width: 70%;
+    margin: auto;
+}
+
+.tali-cards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tali-card{
+    width: 20%;
+    margin: 2em;
+    aspect-ratio: 2 / 2;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position:center center;
+    box-shadow: rgba(100, 100, 111, 0.8) 0px 7px 29px 0px;
+    border-radius: 10px;
+
+
+}
