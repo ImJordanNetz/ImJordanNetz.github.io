@@ -1,0 +1,536 @@
+:root {
+    --dark: #181818;
+    --primary: #7a5af5;
+    --secondary: #9171f8;
+    font-size: 1.5vw;
+    font-family: "new-science", sans-serif;
+
+}
+
+
+/* Found code to edit scroll. Doing this so I can have a good sideways scroll */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: gray var(--dark); /* thumb and track color */
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px; /* width of the entire scrollbar */
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--dark); /* color of the track (part the thumb slides within) */
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: gray; /* color of the thumb itself */
+    border-radius: 20px; /* roundness of the scrollbar thumb */
+  }
+  
+
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark);
+    color: white;
+}
+
+.gradient {
+    background: -webkit-linear-gradient(0deg, rgb(245, 90, 232) 0%, rgba(166,136,250,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.drop-shadow{
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 7px 20px 0px;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background-color: var(--dark);
+    height: 3em;
+}
+
+.nav > nav {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav > nav > a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out;
+}
+
+.nav > nav > .big {
+    font-size: 2em;
+    font-weight: 600;
+    transition: font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out;
+}
+
+/* Changes .big to smaller size and lighter weight when any .small is hovered */
+.nav > nav:has(.small:hover) > .big {
+    font-size: 1.3em;
+    font-weight: normal;
+}
+
+.nav > nav > a:hover {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+#menu-toggle {
+    display: none;
+  }
+
+.menu-button-container {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+
+  .menu-button {
+    transform: translateX(-50%);
+  }
+
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+  
+
+
+.page-title{
+
+    font-size: 4em;
+    margin: 0;
+    margin-top: 0.2em;
+    font-weight: 600;
+    margin-left: 15%;
+}
+
+.home-landing {
+    height: calc(100vh - 3em);
+}
+
+.home-cards-container {
+    margin: auto;
+    margin-top: 5vh;
+    max-width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.8em;
+}
+
+.card{
+    box-sizing: border-box;
+    width: 19vw;
+    height: 16vw;
+    border: 2px solid rgb(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 0.8em;
+    background-color: #252525;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-top: 0.5em;
+}
+
+.card:hover{
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 7px 20px 0px;
+
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.card p {
+    font-size: 0.7em;
+    margin: 0;
+}
+
+.image1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/photo9.jpg);
+}
+
+.image2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/photo10.jpg);
+}
+
+.image3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/photo12.jpg);
+
+}
+
+.image-backdrop{
+    height: 70vh;
+    width: 100vw;
+    background-size: 200%; 
+    background-position: center;
+    box-sizing: border-box;
+    margin-top: 1em;
+    background-repeat: no-repeat;
+}
+
+.image-backdrop-text{
+    margin: auto;
+    padding-top: 3vh;
+    text-align: center;
+    max-width: 40%;
+}
+
+.image-backdrop h1, .image-backdrop p {
+    margin: 0;
+}
+
+
+
+
+
+/* PAGE 2 */
+
+.section-title{
+
+    font-size: 2.5em;
+    margin: 0;
+    margin-top: 0.2em;
+    font-weight: 600;
+    margin-left: 15%;
+}
+
+.side-scroll-container{
+    padding-bottom: 2em;
+    display: flex;
+    overflow-x:scroll;
+    padding-left: 15vw;
+    margin-bottom: 10vh;
+
+
+}
+
+.image-card{
+    min-width: max(250px, 20vw);
+    width: max(250px, 20vw);
+    height: 70vh;
+    margin-right: 0.7em;
+    border-radius: 30px;
+    background-size: 350%; 
+    padding: 0.5em;
+    background-position: center;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+.big-image-card {
+    width: 70%;
+    margin: auto;
+    border-radius: 30px;
+    height: 70vh;
+    background-size: 150%; 
+    padding-left: 3em;
+    background-position: center;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.big-image-text-container {
+    max-width: 30%;
+}
+
+.big-image-text-container h2{
+    font-size: 2em;
+    margin: 0;
+}
+
+
+.about-us-container{
+    width: 70vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
+}
+
+.about-us-item {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0.6em;
+    justify-content: space-between;
+    
+}
+
+.profile-photo{
+    width: 70%;
+    background-position: center;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    aspect-ratio:  1 / 1;
+    border: 1px solid white;
+}
+
+.about-us-text {
+    margin-top: 10vh;
+    text-align: center;
+}
+
+.about-us-text * {
+    margin: 0;
+}
+
+
+
+@media (max-width:700px) {
+    body{
+        font-size: 5vw;
+    }
+
+    .page-title {
+        margin: auto;
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .home-cards-container{
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .nav >nav {
+        height: 3vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav > nav .big, .nav > nav .small{
+        display: none;
+    }
+
+    .menu-button-container {
+        display: flex;
+    }
+    .menu {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        position: absolute;
+        top: 0;
+        margin-top: 3vh;
+        left: 0;
+        flex-direction: column;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+      }
+      #menu-toggle ~ .menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        display: none;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+
+      #menu-toggle:checked ~ .menu li {
+        border: 1px solid #333;
+        height: 2.5em;
+        display: flex;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      .menu > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #222;
+      }
+      .menu > li:not(:last-child) {
+        border-bottom: 1px solid #444;
+      }   
+
+
+
+    .card {
+        width: 80%;
+        height: fit-content;
+    }
+    
+    .home-landing{
+        height: fit-content;
+    }
+
+    .image-backdrop{
+        height: 100vh;
+        width: 100vw;
+        background-size: cover; 
+        background-position: center;
+        box-sizing: border-box;
+        position: relative;
+        margin-top: 1em;
+    }
+    
+    
+    .image-backdrop-text{
+        margin: auto;
+        padding-top: 3vh;
+        text-align: center;
+        max-width: 80%;
+    }
+    
+    .image-backdrop h1, .image-backdrop p {
+        margin: 0;
+    }
+
+    .section-title{
+
+        font-size: 2em;
+        margin-top: 0.2em;
+        text-align: center;
+        margin: auto;
+    }
+    
+    
+    .image-card{
+        min-width: 250px;
+        width: 250px;
+        height: 70vh;
+        margin-right: 0.7em;
+        border-radius: 30px;
+        background-size: 400%; 
+        padding: 0.5em;
+        background-position: center;
+        box-sizing: border-box;
+        background-repeat: no-repeat;
+    }
+
+    .big-image-card {
+        width: 90%;
+        margin: auto;
+        border-radius: 30px;
+        height: 70vh;
+        background-size: 250%; 
+        padding-left: 0;
+        align-items: normal;
+        justify-content: center;
+        padding-top: 2em;
+    }
+    
+    .big-image-text-container {
+        text-align: center;
+        max-width: fit-content;
+    }
+    
+    .big-image-text-container h2{
+        font-size: 2em;
+
+        margin: 0;
+    }
+
+    .about-us-container{
+        width: 70vw;
+
+        max-height: fit-content;
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-us-item {
+        width: 80vw;
+        height: fit-content;
+        max-height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        padding: 0.6em;
+        justify-content: space-between;
+        margin-bottom: 10vh;
+        
+    }
+    
+    .profile-photo{
+
+        width: 60%;
+        background-position: center;
+        background-size: 150%;
+        background-repeat: no-repeat;
+        border-radius: 100%;
+        aspect-ratio:  1 / 1;
+        border: 1px solid white;
+    }
+    
+    .about-us-text {
+        margin-top: 2vh;
+        text-align: center;
+    }
+    
+    .about-us-text h2 {
+        font-size: 2em;
+    }
+
+    .about-us-text h3 {
+        font-size: 1em;
+    }
+
+    .about-us-text p {
+        font-size: 0.7em;
+    }
+
+    .about-us-text * {
+        margin: 0;
+    }
+    
+}
