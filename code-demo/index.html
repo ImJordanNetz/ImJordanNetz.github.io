@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Header Effect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="slide-effect">
+        <div id="left-side" class="side">
+            <h2 class="title">
+            This class is
+            <span class="fancy">interesting</span>
+            </h2>
+        </div>
+        <div id="right-side" class="side">
+            <h2 class="title">
+            This class is
+            <span class="fancy">difficult</span>
+            </h2>
+        </div>
+    </div>
+
+<div class="content">
+    <h3>I bet you just said "Woah jordan this is a sick effect"</h3>
+    <p>And you'd be right. This effect from <a href="https://www.youtube.com/watch?v=zGKNMm4L-r4&ab_channel=Hyperplexed" target="_blank">Hyperplxed</a> is amazing. Its clear and good looking. It doesn't overwhelm in my opinion. How the hell do we make this though?</p>
+    <br>
+    <p>Let's start with what we know: We need two "screens" each with their own text. Also, the words "better" and 'worse" are fancy so lets make sure we put that in the div.</p>
+    <pre class="code-block">
+        <!-- chatGPT did this-->
+        <code>
+          &lt;div class=&quot;slide-effect&quot;&gt;
+            &lt;div id=&quot;left-side&quot; class=&quot;side&quot;&gt;
+              &lt;h2 class=&quot;title&quot;&gt;
+                This class is
+                &lt;span class=&quot;fancy&quot;&gt;better&lt;/span&gt;
+              &lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div id=&quot;right-side&quot; class=&quot;side&quot;&gt;
+              &lt;h2 class=&quot;title&quot;&gt;
+                This class is
+                &lt;span class=&quot;fancy&quot;&gt;worse&lt;/span&gt;
+              &lt;/h2&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        </code>
+      </pre>
+
+      <h3>Alright alright alright lets start styling</h3>
+
+      <p>Let's improve the appearance of our titles by updating their color, font family, size, margin, and width properties. We'll also center the text horizontally on the page. To center our titles vertically, we'll set the height of each side to 100% of the viewport and place them in the center using CSS grid. Lets use 'position: absolute' to layer the sides on top of one another and 'overflow: hidden' to manage any overflow.</p>
+
+
+      <pre class="code-block">
+        <!-- chatGPT did this-->
+        <code>
+            .side {
+                display: grid;
+                height: 100%;
+                overflow: hidden;
+                place-items: center;
+                position: absolute;
+                width: 100%;
+              }
+            
+              .side .title {
+                font-family: "Montserrat", sans-serif;
+                font-size: 3vw;
+                font-weight: 800;
+                margin: 0 10vw;
+                width: 80vw;
+              };
+          &lt;/div&gt;
+        </code>
+      </pre>
+
+
+      <p>Lets spend some time making each side look good and unique. This is completely up to you so have fun! Here's what i did:</p>
+      <br>
+      <p>Note that the left-size has a z-index of 2. This is really important!!</p>
+
+      <pre class="code-block">
+        <!-- chatGPT did this-->
+        <code>
+            .side {
+                display: grid;
+                height: 100%;
+                overflow: hidden;
+                place-items: center;
+                position: absolute;
+                width: 100%;
+              }
+      
+              .side .title {
+                font-family: &quot;Montserrat&quot;, sans-serif;
+                font-size: 4vw;
+                font-weight: 800;
+                margin: 0 10vw;
+                width: 80vw;
+              }
+      
+              .side .fancy {
+                font-family: &quot;Permanent Marker&quot;, cursive;
+                font-size: 1.8em;
+                line-height: 0.6em;
+              }
+      
+              #left-side {
+                background-color: #e74c3c;
+                width: 60%;
+                z-index: 2;
+              }
+      
+              #left-side .title {
+                color: white;
+              }
+      
+              #left-side .fancy {
+                color: #3498db;
+              }
+      
+              #right-side {
+                background-color: #3498db;
+              }
+      
+              #right-side .title {
+                color: #2c3e50;
+              }
+      
+              #right-side .fancy {
+                color: white;
+              }
+        </code>
+      </pre>
+
+      <h3>Now make this thang sliiide</h3>
+      <p>To do this, we want the slider to keep track of where out mouse is, and then update the width of the left page accordingly. Luckily JS makes this pretty easy for us.</p>
+      <br>
+      <p>Let's grab the left side element using getElementById and store it in a variable. Since our slider is controlled by our mouse, we'll create a function to handle the onmousemove event. Inside this function, all we need to do is calculate the width of the left side as a percentage based on the current position of the mouse. Once we have this value, we can simply assign it to the width attribute on our element.</p>
+    
+      <pre class="code-block">
+        <!-- chatGPT did this-->
+        <code>
+            const left = document.getElementById("left-side");
+
+            const handleMove = e => {
+              left.style.width = `${e.clientX / window.innerWidth * 100}%`;
+            }
+        
+            document.onmousemove = e => handleMove(e);
+        
+            document.ontouchmove = e => handleMove(e.touches[0]);
+        </code>
+      </pre>
+
+      <p>Congrats!</p>
+
+</div>
+
+
+
+  <script>
+    const left = document.getElementById("left-side");
+
+    const handleMove = e => {
+      left.style.width = `${e.clientX / window.innerWidth * 100}%`;
+    }
+
+    document.onmousemove = e => handleMove(e);
+
+    document.ontouchmove = e => handleMove(e.touches[0]);
+  </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+:root {
+    --dark: rgb(20, 20, 20);
+    --yellow: rgb(253, 216, 53);
+    --blue: rgb(98, 0, 234);
+    
+    --c1: rgb(3, 7, 18);
+    --c2: rgb(230, 53, 186);
+    
+    --left-color: var(--c1);
+    --right-color: var(--c2);
+  }
+
+  body {
+    background-color: var(--dark);
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .slide-effect {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+  }
+
+  .side {
+    display: grid;
+    height: 100%;
+    overflow: hidden;
+    place-items: center;
+    position: absolute;
+    width: 100%;
+  }
+
+  .side .title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 6vw;
+    font-weight: 800;
+    margin: 0 10vw;
+    
+    width: 80vw;
+  }
+
+  .side .fancy {
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.8em;
+    line-height: 0.6em;
+  }
+
+  #left-side {
+    background-color: var(--left-color);
+    width: 60%;
+    z-index: 2;
+  }
+
+  #left-side .title {
+    color: white;
+  }
+
+  #left-side .fancy {
+    color: var(--right-color);
+  }
+
+  #right-side {
+    background-color: var(--right-color);
+  }
+
+  #right-side .title {
+    color: var(--dark);
+  }
+
+  #right-side .fancy {
+    color: white;
+  }
+
+
+  .code-block {
+    background-color: #2d2d2d;
+    border-radius: 5px;
+    color: #f8f8f2;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    margin: 20px 0;
+    overflow: auto;
+    padding: 20px;
+    white-space: pre-wrap;
+    position: relative;
+    z-index: 2;
+  }
+  
+
+  .content {
+
+    margin: auto;
+    width: 50%;
+    font-size: 100%;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+
+  }
+
+  .content h3 {
+    font-size: 2.2vw;
+    font-weight: 800;
+    color: var(--c2);
+  }
+
+  .content p {
+    font-weight: 200;
+    
+  }
+  .content a {
+    color: var(--c2);
+  }
+
+
