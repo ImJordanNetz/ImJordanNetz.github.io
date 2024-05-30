@@ -1,0 +1,265 @@
+:root.light{
+    --text: #000000;
+    --background: white;
+}
+
+:root.dark{
+    --text: white;
+    --background: black;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: "new-science", sans-serif;
+}
+
+
+:root.light body {
+    background-color: var(--background);
+    background-size: 40px 40px, 40px 40px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.1) .1em, transparent .1em), 
+        linear-gradient(90deg, rgba(0,0,0,0.1) .1em, transparent .1em);
+        
+}
+
+:root.dark body {
+    background-color: var(--background);
+    background-size: 40px 40px, 40px 40px;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.1) .1em, transparent .1em), 
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) .1em, transparent .1em);
+        
+}
+
+
+
+
+/* Found code to edit scroll. Doing this so I can have a good sideways scroll */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: gray var(--dark); /* thumb and track color */
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px; /* width of the entire scrollbar */
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--dark); /* color of the track (part the thumb slides within) */
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: gray; /* color of the thumb itself */
+    border-radius: 20px; /* roundness of the scrollbar thumb */
+  }
+  
+
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark);
+    color: var(--text);
+}
+
+.gradient {
+    background: -webkit-linear-gradient(0deg, rgb(245, 90, 232) 0%, rgba(166,136,250,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.drop-shadow{
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 7px 20px 0px;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background-color: var(--dark);
+    height: 3em;
+}
+
+.nav > nav {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav > nav > a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out;
+}
+
+.nav > nav > .big {
+    font-size: 2em;
+    font-weight: 600;
+    transition: font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out;
+}
+
+/* Changes .big to smaller size and lighter weight when any .small is hovered */
+.nav > nav:has(.small:hover) > .big {
+    font-size: 1.3em;
+    font-weight: normal;
+}
+
+.nav > nav > a:hover {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+#menu-toggle {
+    display: none;
+  }
+
+.menu-button-container {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+
+  .menu-button {
+    transform: translateX(-50%);
+  }
+
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+  
+
+
+.page-title{
+
+    font-size: 4em;
+    margin: 0;
+    margin-top: 0.2em;
+    font-weight: 600;
+    margin-left: 15%;
+}
+
+.home-landing {
+    height: calc(100vh - 3em);
+}
+
+.home-cards-container {
+    margin: auto;
+    margin-top: 5vh;
+    max-width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.8em;
+}
+
+.card{
+    box-sizing: border-box;
+    width: 19vw;
+    height: 16vw;
+    border: 2px solid rgb(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 0.8em;
+    background-color: var(--background);
+    transition: box-shadow 0.3s ease-in-out;
+    margin-top: 0.5em;
+}
+
+:root.light .card {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.card:hover{
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 7px 20px 0px;
+
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.card p {
+    font-size: 0.7em;
+    margin: 0;
+}
+
+.image1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/photo9.jpg);
+}
+
+.image2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/photo10.jpg);
+}
+
+.image3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/photo12.jpg);
+
+}
+
+.image-backdrop{
+    color: white;
+    height: 70vh;
+    width: 100vw;
+    background-size: 200%; 
+    background-position: center;
+    box-sizing: border-box;
+    margin-top: 1em;
+    background-repeat: no-repeat;
+}
+
+.image-backdrop-text{
+    margin: auto;
+    padding-top: 3vh;
+    text-align: center;
+    max-width: 40%;
+}
+
+.image-backdrop h1, .image-backdrop p {
+    margin: 0;
+}
+
+
