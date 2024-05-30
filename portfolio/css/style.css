@@ -15,8 +15,46 @@ html, body {
     font-family: "stevie-sans", sans-serif;
 }
 
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 15vh;
+    font-size: 1em;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    padding: 0 7vw;
+}
+
+.nav-link-container {
+    margin: 0 1vw;
+}
+
+.nav-link-container span{
+    color: var(--blue);
+
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.9em;
+    font-family: "new-science", sans-serif;
+    
+
+}
+
+
+
 .box-shadow {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+a:has(.primary-button), a:has(.secondary-button){
+    text-decoration: none;
 }
 
 .primary-button {
@@ -35,6 +73,7 @@ html, body {
 .primary-button:hover {
     cursor: pointer;
     box-shadow: none;
+    
 }
 
 .secondary-button {
@@ -48,7 +87,7 @@ html, body {
     transition: all 0.5s ease-in-out;
     width: fit-content;
     border-radius: 20px;
-
+    
 }
 
 .secondary-button:hover {
