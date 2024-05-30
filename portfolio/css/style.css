@@ -15,6 +15,17 @@ html, body {
     font-family: "stevie-sans", sans-serif;
 }
 
+#trailer {
+    z-index: 1000;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 20px;
+    border: 1.5px solid black;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+}
+
 nav {
     width: 100%;
     display: flex;
