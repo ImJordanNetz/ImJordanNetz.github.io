@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/oii0kjc.css">
     <style>
         .home-landing {
-            height: 80vh;
+            height: 70vh;
             padding-left: 15vw;
             padding-top: 10vh;
         }
@@ -28,32 +28,89 @@
             margin: 0;
             font-weight: 400;
             padding: 0;
-            line-height: 0.7; /* Ensure line-height is 1 for better alignment */
+            line-height: 0.69; /* Ensure line-height is 1 for better alignment */
         }
 
-
-        h2 
-        {
+        .home-landing h2 {
+            display: flex;
             font-size: 4vw;
             margin: 0;
             font-weight: 300;
+            align-items: center;
         }
 
-        h2 span {
-            color: var(--red)
+        .text-change-animation {
+        gap: 1vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        height: calc(1em + 0.5vh); /* Adjusted to match the total height of three spans */
         }
+
+        .text-change-animation span {
+        line-height: 1em;
+        color: white;
+        display: block;
+        height: 1em;
+        width: fit-content;
+        padding: 0 1vw;
+        }
+
+        .text-change-animation span:first-child {
+        animation: text-animation 12s infinite;
+        animation-delay: 2s;
+        }
+
+
 
         p {
             margin: 0
         }
 
-        #home-landing-buttons{
+        .home-landing-buttons{
             display: flex;
         }
 
         #home-landing-buttons div{
             margin: 4vh 0.5vw 0 0;
-            scale: 0.8;
+            font-size: 1em;
+        }
+
+        @keyframes text-animation {
+            0%, 10% { margin-top: calc(0); }
+            20%, 30% { margin-top: calc(-1em - 1vh); }
+            40%, 50% { margin-top: calc(-2em - 1vh); }
+            60%, 70% { margin-top: calc(-1em - 1vh); }
+            90%, 100% { margin-top: 0; }
+            }
+        
+        .home-about-me {
+            background-color: var(--red);
+            padding: 3vw 15vw;
+            color: white;
+        }
+
+        .home-about-me h2 {
+            font-size: 4vw;
+        }
+
+        .home-about-me p {
+            font-size: 1.2vw;
+        }
+
+        .home-portfolio {
+            padding: 3vw 15vw;
+            
+        }
+
+        .home-portfolio h2 {
+            font-size: 4vw;
+            margin: 0;
+        }
+
+        .home-portfolio-cards {
+            display: flex;
+            gap: 3vw;
         }
         
     </style>
@@ -62,7 +119,7 @@
 <body>
     <nav>
         <div class="nav-left">
-            <div class="nav-link-container"><a data-value="HOME" href="./index.html">HOME</a></div>
+            <div class="nav-link-container"><a data-value="JORDAN NETZ | HOME" href="./index.html">JORDAN NETZ</a></div>
         </div>
         <div class="nav-right">
             <div class="nav-link-container"><span>1. </span><a data-value="ABOUT" href="./about.html">ABOUT</a></div>
@@ -73,27 +130,108 @@
         </div>
     </nav>
 
-    <div class="home-landing">
+    <section class="home-landing">
         <p id="pre-header-text">hello my name is</p>            
         <h1>Jordan Netz</h1>
 
-        <h2>I am a <span>Software Developer</span></h2>
+        <h2>I am a &nbsp
+            <div class="text-change-animation">
+                <span style="background-color: var(--red);">Software Developer</span>
+                <span style="background-color: var(--dark-blue);">Student</span>
+                <span style="background-color: var(--light-blue);">Rizzler</span>
+            </div>
+        </h2>
         <p>I like to code and make things. You should check it out.</p>
-        <div id="home-landing-buttons">
-            <a href="portfolio.html"><div class="primary-button">My Portfolio</div></a>
-            <a href="about.html"><div class="secondary-button">Learn More About Me</div></a>
+        <div class="home-landing-buttons" style="margin-top: 3vh;">
+            <a href="./portfolio.html"><div class="primary-button">My Portfolio</div></a>
+            <a href="./about.html"><div class="secondary-button">Learn More About Me</div></a>
         </div>
-    </div>
+    </section>
     
+    <section class="home-about-me">
+        <h2 style="margin: 0; margin-bottom:4vh;">My Mom Says I'm a Great Coder</h2>
+        <p>And I think you should believe her.</p> <br>
+        <p>I've been coding for a decade now and have works on things from web development to machine learning to cybersecurity. From my humble beginings building games in scratch I'm excited to go to UC Irvine to study Computer Science.</p>
 
-    <div class="demoing-items">
-        <div class="buttons">
-            <a><div class="primary-button">Primary Button</div></a>
-            <a><div class="secondary-button">Secondary Button</div></a>
+    </section>
+        
+        
+    <section class="home-portfolio">
+        <h2 style="">Here's some projects</h2>
+        <div class="home-landing-buttons" style="margin-bottom: 3vh;">
+            <a href="./portfolio.html"><div class="primary-button">See all Projects</div></a>
+            <a href="./about.html"><div class="secondary-button">Learn More About Me</div></a>
         </div>
-        <div class="box-shadow" style="width: 100px; height: 100px; border: 1px solid grey;">This has a box shadow</div>
-    </div>
+        <div class="home-portfolio-cards">
+            <div class="portfolio-card">
+                <h3>Tender Touch Learning</h3>
+                    <div class="portfolio-card-gradient" style="background: linear-gradient(45deg, hsla(0, 40%, 45%, 1) 0%, hsla(325, 57%, 50%, 1) 50%, hsla(236, 67%, 55%, 1) 100%);">
+                        <a href="https://imjordannetz.github.io/group3/tendertouch/index.html" target="_blank"><img src="./images/tendertouch.png" alt="" class="portfolio-image"></a>
+                    </div>
+                <a href="https://imjordannetz.github.io/group3/tendertouch/index.html" target="_blank"><div class="primary-button">View Website</div></a>
+            </div>
 
+            <div class="portfolio-card">
+                <h3>A Responsive Website</h3>
+                    <div class="portfolio-card-gradient" style="background: linear-gradient(45deg, rgba(0,91,255,1) 28%, rgba(8,0,172,1) 100%);">
+                        <a href="https://imjordannetz.github.io/building-responsive/" target="_blank"><img src="./images/buildingresponsive.png" alt="" class="portfolio-image"></a>
+                    </div>
+                <a href="https://imjordannetz.github.io/building-responsive/" target="_blank"><div class="primary-button">View Website</div></a>
+            </div>
+            <div class="portfolio-card">
+                <h3>Connect4AI</h3>
+                    <div class="portfolio-card-gradient" style="background: linear-gradient(45deg, rgba(255,0,236,1) 28%, rgba(172,0,15,1) 100%);">
+                        <a href="https://github.com/ImJordanNetz/Connect4AI" target="_blank"><img src="./images/connect4.png" alt="" class="portfolio-image"></a>
+                    </div>
+                <a href="https://github.com/ImJordanNetz/Connect4AI" target="_blank"><div class="primary-button">View Website</div></a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <a href="index.html">
+            <div class="footer-card" style="background-color: var(--red);">
+                <h3>Home</h3>
+                <p>A little about me and some projects I've been working on.</p>
+            </div>
+        </a>
+
+        <a href="about.html">
+            <div class="footer-card" style="background-color: var(--light-blue);">
+                <h3>About</h3>
+                <p>Information about me and my background.</p>
+            </div>
+        </a>
+
+        <a href="portfolio.html">
+            <div class="footer-card" style="background-color: var(--blue);">
+                <h3>Portfolio</h3>
+                <p>Examples of my work and projects.</p>
+            </div>
+        </a>
+
+        <a href="current.html">
+            <div class="footer-card" style="background-color: var(--dark-blue);">
+                <h3>Current</h3>
+                <p>Current projects and activities I'm involved in.</p>
+            </div>
+        </a>
+
+        <a href="pricing.html">
+            <div class="footer-card" style="background-color: #6515a7;">
+                <h3>Pricing</h3>
+                <p>Details about my services and pricing.</p>
+            </div>
+        </a>
+
+        <a href="contact.html">
+            <div class="footer-card" style="background-color: #e100ff;">
+                <h3>Contact</h3>
+                <p>Get in touch with me.</p>
+            </div>
+        </a>
+    </footer>
     <script src="./js/index.js"></script>
     
 
