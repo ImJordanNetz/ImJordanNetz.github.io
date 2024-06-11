@@ -3,9 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/oii0kjc.css">
+    
+    <style>
+
+        section {
+            margin: 0 15vw;
+            display: flex;
+            gap: 3%;
+            margin-bottom: 7vh;
+            
+        }
+
+        h2 {
+            margin: 0;
+            margin-left: 15vw;
+            font-size: 2.5vw;
+            font-weight: 400;
+        }
+
+
+        .port-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .big {
+            width: 70%;
+        }
+
+        .small {
+            width: 100%;
+        }
+
+        .small-cards {
+            width: 27%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .port-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-position: top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .port-text {
+            display: flex;
+            justify-content: space-between;
+            font-family: "new-science", sans-serif;
+            
+        }
+
+        .port-text p {
+            margin: 1vh 0;
+        }
+
+        
+
+    </style>
 </head>
 <body>
+    <div id="trailer"></div>
+    <nav>
+        <div class="nav-left">
+            <div class="nav-link-container"><a data-value="JORDAN NETZ | HOME" href="./index.html">JORDAN NETZ</a></div>
+        </div>
+        <div class="nav-right">
+            <div class="nav-link-container"><span>1. </span><a data-value="ABOUT" href="./about.html">ABOUT</a></div>
+            <div class="nav-link-container"><span>2. </span><a data-value="PORTFOLIO" href="./portfolio.html">PORTFOLIO</a></div>
+            <div class="nav-link-container"><span>3. </span><a data-value="CASE STUDY" href="./CASE-STUDY.html">CASE STUDY</a></div>
+            <div class="nav-link-container"><span>4. </span><a data-value="PRICING" href="./pricing.html">PRICING</a></div>
+            <div class="nav-link-container"><span>5. </span><a data-value="CONTACT" href="./contact.html">CONTACT</a></div>
+        </div>
+    </nav>
+    <h1>Portfolio</h1>
+    <div class="section-container">
+        <section class="portfolio-section">
+            
+            <div class="big port-card">
+                <a href="https://imjordannetz.github.io/building-responsive/" target="_blank"><div class="port-image" style="background-image: url(./images/buildingresponsive.png);"></div></a>
+                <div class="port-text">
+                    <p>Responsive Design</p>
+                    <p>Web Design 2</p>
+                </div>
+            </div>
+
+            <div class="small-cards">
+                <div class="small port-card">
+                    <a href="https://github.com/ImJordanNetz/Connect4AI" target="_blank"><div class="port-image" style="background-image: url(./images/connect4.png);"></div></a>
+                    <div class="port-text">
+                        <p>Connect4AI</p>
+                        <p>EPS IP</p>
+                    </div>
+                </div>
+                <div class="small port-card">
+                    <a href="https://github.com/ImJordanNetz/pacmanAI" target="_blank"><div class="port-image" style="background-image: url(./images/pacman.jpg);"></div></a>
+                    <div class="port-text">
+                        <p>PacManAI</p>
+                        <p>Web Design 2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-section">
+            <div class="small-cards">
+                <div class="small port-card">
+                    <a href="https://imjordannetz.github.io/studying" target="_blank"><div class="port-image" style="background-image: url(./images/studying.jpg);"></div></a>
+                    <div class="port-text">
+                        <p>How to Study</p>
+                        <p>Web Design 1</p>
+                    </div>
+                </div>
+                <div class="small port-card">
+                    <a href="" target="_blank"><div class="port-image" style="background-image: url(./images/rubiks.jpg);"></div></a>
+                    <div class="port-text">
+                        <p>About the Rubik's Cube</p>
+                        <p>Web Design 2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="big port-card">
+                <a href="https://imjordannetz.github.io/group3/tendertouch/index.html" target="_blank"><div class="port-image" style="background-image: url(./images/vet.jpg);"></div></a>
+                <div class="port-text">
+                    <p>Tender Touch</p>
+                    <p>Web Design 2</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="portfolio-section">
+            
+            <div class="big port-card">
+                <a href="" target="_blank"><div class="port-image" style="background-image: url(./images/music.jpg);"></div></a>
+                <div class="port-text">
+                    <p>Music Rec System</p>
+                    <p>Adv. Programming</p>
+                </div>
+            </div>
+
+            <div class="small-cards">
+                <div class="small port-card">
+                    <a href="https://imjordannetz.github.io/student-student-learning/" target="_blank"><div class="port-image" style="background-image: url(./images/tutoring.jpg);"></div></a>
+                    <div class="port-text">
+                        <p>Tutor Website Idea</p>
+                        <p>Web Design 2</p>
+                    </div>
+                </div>
+                <div class="small port-card">
+                    <a href="https://imjordannetz.github.io/code-demo/" target="_blank"><div class="port-image" style="background-image: url(./images/demo.png);"></div></a>
+                    <div class="port-text">
+                        <p>CSS Effect Tutorial</p>
+                        <p>Web Design 2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-section">
+            <div class="small-cards">
+                <div class="small port-card">
+                    <a href="" target="_blank"><div class="port-image" style="background-image: url(./images/eagle.jpg);"></div></a>
+                    <div class="port-text">
+                        <p>EPS Redesign</p>
+                        <p>Web Design 2</p>
+                    </div>
+                </div>
+                <div class="small port-card">
+                    <a href="" target="_blank"><div class="port-image" style="background-image: url(./images/climbing.png);"></div></a>
+                    <div class="port-text">
+                        <p>This Portfolio!</p>
+                        <p>Web Design 2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="big port-card">
+                <a href="" target="_blank"><div class="port-image" style="background-image: url(./images/home-banner3.jpg); background-position: center;"></div></a>
+                <div class="port-text">
+                    <p>Yea's Wok</p>
+                    <p>Web Design 1</p>
+                </div>
+            </div>
+
+            
+        </section>
+
+    </div>
+
     
+        
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-link-container"><a href="./index.html" style="color: white;">HOME</a></div>
+                <div class="footer-link-container"><a href="./about.html" style="color: white;">ABOUT</a></div>
+                <div class="footer-link-container"><a href="./portfolio.html" style="color: white;">PORTFOLIO</a></div>
+                <div class="footer-link-container"><a href="./CASE-STUDY.html" style="color: white;">CASE STUDY</a></div>
+                <div class="footer-link-container"><a href="./pricing.html" style="color: white;">PRICING</a></div>
+                <div class="footer-link-container"><a href="./contact.html" style="color: white;">CONTACT</a></div>
+            </div>
+            <div class="footer-note">
+                &copy; 2024 Jordan Netz. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
 </body>
 </html>

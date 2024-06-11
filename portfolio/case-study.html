@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASE STUDY</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/oii0kjc.css">
+    <style>
+        section {
+            margin: 0 15vw;
+        }
+
+        .slide-effect {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 70vh;
+            z-index: 0;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .slide-effect:hover {
+            cursor: pointer;
+        }
+
+        .side {
+            display: grid;
+            height: 100%;
+            overflow: hidden;
+
+            position: absolute;
+            width: 100%;
+        }
+
+        .side .img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #left-side {
+            width: 60%;
+            z-index: 2;
+            background-position: left;
+        }
+
+        #right-side {
+            width: 100%;
+            background-position: right;
+        }
+
+        .slide-description {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 4vw;
+            font-family: "new-science", sans-serif;
+            margin: 0;
+        }
+        
+        li, p {
+            font-size: 1.5vw;
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .right {
+            place-self:center;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div id="trailer"></div>
+    <nav>
+        <div class="nav-left">
+            <div class="nav-link-container"><a data-value="JORDAN NETZ | HOME" href="./index.html">JORDAN NETZ</a></div>
+        </div>
+        <div class="nav-right">
+            <div class="nav-link-container"><span>1. </span><a data-value="ABOUT" href="./about.html">ABOUT</a></div>
+            <div class="nav-link-container"><span>2. </span><a data-value="PORTFOLIO" href="./portfolio.html">PORTFOLIO</a></div>
+            <div class="nav-link-container"><span>3. </span><a data-value="CASE STUDY" href="./CASE-STUDY.html">CASE STUDY</a></div>
+            <div class="nav-link-container"><span>4. </span><a data-value="PRICING" href="./pricing.html">PRICING</a></div>
+            <div class="nav-link-container"><span>5. </span><a data-value="CONTACT" href="./contact.html">CONTACT</a></div>
+        </div>
+    </nav>
+    <h1>A Case Study</h1>
+    <section style="margin-top: 5vh; margin-bottom: 10vh;">
+        <div class="slide-description">
+            <h2>Before</h2>
+            <h2>After</h2>
+        </div>
+        <div class="slide-effect" id="container">
+            
+            <div id="left-side" class="side">
+              <div class="img" style="background-image: url(./images/before.png);"></div>
+            </div>
+            <div id="right-side" class="side">
+                <div class="img" style="background-image: url(./images/after.png);"></div>
+            </div>
+          </div>
+    </section>
+
+    <section>
+        <h2>Woah! It looks so much better!</h2>
+        <div class="split">
+            <div class="left">
+                <p> That's right, with the <span style="font-weight: 600;">Standard</span> package Group 3 Inc completely transformed this website.</p>
+                <p>Our improvements include</p>
+
+                <ul>
+                    <li>Updated interactive navigation</li>
+                    <li>Complete redesign of all major pages</li>
+                    <li>Resposive design for mobile</li>
+                    <li>Improved upon website's content</li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="pricing-card">
+                    <span style="display: flex; justify-content: center;"><h3>STANDARD</h3></span>
+                    <ul>
+                        <li>All Basic Plan Features</li>
+                        <li>Up to 5 Additional Pages</li>
+                        <li>Advanced SEO</li>
+                        <li>Responsive Design</li>
+                        <li>Monthly Analytics Reports</li>
+                    </ul>
+                    <span style="display: flex; justify-content: center;"><h3>$300</h3></span>
+                    <span style="display: flex; justify-content: center; margin-top: 3vh; font-size: 0.7vw;"><div class="primary-button">Contact Me</div></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-link-container"><a href="./index.html" style="color: white;">HOME</a></div>
+                <div class="footer-link-container"><a href="./about.html" style="color: white;">ABOUT</a></div>
+                <div class="footer-link-container"><a href="./portfolio.html" style="color: white;">PORTFOLIO</a></div>
+                <div class="footer-link-container"><a href="./CASE-STUDY.html" style="color: white;">CASE STUDY</a></div>
+                <div class="footer-link-container"><a href="./pricing.html" style="color: white;">PRICING</a></div>
+                <div class="footer-link-container"><a href="./contact.html" style="color: white;">CONTACT</a></div>
+            </div>
+            <div class="footer-note">
+                &copy; 2024 Jordan Netz. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script>
+        const left = document.getElementById("left-side");
+        const container = document.getElementById("container");
+      
+        const handleMove = e => {
+          const rect = container.getBoundingClientRect();
+        //   Had to do a lot of research but no one specific source for this - used my old demo code and found multiple different ways to detect if hovering on an object
+          if (e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom) {
+            const offsetX = e.clientX - rect.left;
+            const width = Math.max(0, Math.min(offsetX / rect.width * 100, 100));
+            left.style.width = `${width}%`;
+          }
+        }
+      
+        document.onmousemove = e => handleMove(e);
+        document.ontouchmove = e => handleMove(e.touches[0]);
+      </script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

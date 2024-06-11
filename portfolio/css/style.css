@@ -13,7 +13,10 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: "stevie-sans", sans-serif;
+    transition: background-color 0.3s ease-in-out;
 }
+
+
 
 #trailer {
     z-index: 1000;
@@ -25,7 +28,14 @@ html, body {
     aspect-ratio: 1/1;
     border-radius: 100%;
     pointer-events: none;
+    transition: all 0.1s ease-in-out;
 }
+
+body:has(a:hover) #trailer, body:has(input[type="text"]:not(:focus):hover) #trailer, body:has(input[type="email"]:not(:focus):hover) #trailer, body:has(button:hover) #trailer, body:has(.slide-effect:hover) #trailer{
+    width: 35px;
+    border: 2px solid black;
+}
+
 
 nav {
     width: 100%;
@@ -108,10 +118,10 @@ a:has(.primary-button), a:has(.secondary-button){
 }
 
 
-.demoing-items{
-    display: grid;
-    place-items: center;
-    height: 100vh;
+h1 {
+    font-size: 6vw;
+    margin: 0;
+    margin-left: 15vw;
 }
 
 
@@ -167,51 +177,86 @@ a:has(.primary-button), a:has(.secondary-button){
 }
 
 
+.pricing-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 5vh 0;
+}
 
-
-footer {
-    margin: auto;
-    margin-bottom: 2vh;
-    width: 90%;
-    display: flex;
-    height: 20vh;
+.pricing-card h3 {
     
-}
-
-footer a {
-    flex: 1;
-    display: flex;
-    text-decoration: none;
-    
-}
-
-.footer-card {
-    padding: 1vw;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
-
-}
-
-footer a:first-child .footer-card {
-    border-radius: 30px 0 0 30px;
-}
-
-footer a:last-child .footer-card {
-    border-radius: 0px 30px 30px 0px;
-}
-
-.footer-card h3 {
-    font-size: 1.5vw;
+    width: fit-content;
+    margin: auto 0;
     font-weight: 550;
+    font-size: 2vw;
+    font-family: "new-science", sans-serif;
+}
+
+.pricing-card ul {
+    padding: 1vw;
     margin: 0;
 }
 
-.footer-card p {
-    font-size: 1vw;
+.pricing-card li {
+    color: gray;
+    font-size: 0.8vw;
+}
+
+/* Highligher effect: https://medium.com/front-end-weekly/highlighter-effect-with-css-e8131d260db9 */
+
+footer {
+    background: var(--dark-blue);
+    padding: 1vw;
+    color: white;
+    text-align: center;
+    max-height: 12vh;
+}
+
+.footer-container {
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+}
+
+.footer-link-container {
+    margin: 0.2vw 0;
+}
+
+.footer-link-container a {
+    padding: 0.1vw;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-link-container a::before {
+    background: var(--red);
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.footer-link-container a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.footer-link-container a:hover {
+    color: var(--light-blue);
+}
+
+.footer-note {
+    margin-top: 1vh;
 }

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/oii0kjc.css">
+    <style>
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        section {
+            height: 50vh;
+            display: grid;
+
+        }
+        
+
+        h2 {
+            justify-content: center;
+            margin: auto;
+            font-weight: 200;
+            font-size: 2vw;
+        }
+
+        p{
+            margin: 0;
+            font-size: 1.1vw;
+        }
+
+        .wrapper {
+            display: grid;
+            place-items: center;
+        }
+        .form-container {
+            text-align: center;
+            width: fit-content;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        form{
+            margin-top: 5vh;
+            text-align: center;
+            font-family: "new-science", sans-serif;
+        }
+        .form-group {
+            justify-content: center;
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input{
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            font-size: 1.1vw;
+            font-family: "new-science", sans-serif;
+        }
+
+        .primary-button {
+            width: 10vw;
+            font-size: 1vw;
+            margin-top: 7vh;
+            font-family: "new-science", sans-serif;
+        }
+
+        .form-group button {
+            border: none;
+            background-color: transparent;
+
+        }
+        
+        .input-wrapper{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-underline {
+            width: 100%;
+            height: 2px;
+            background-color: var(--light-blue);
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .input-wrapper:has(input:focus) .input-underline {
+            width: 100%;
+            height: 2px;
+            background-color: var(--red);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="trailer"></div>
+
+    <nav>
+        <div class="nav-left">
+            <div class="nav-link-container"><a data-value="JORDAN NETZ | HOME" href="./index.html">JORDAN NETZ</a></div>
+        </div>
+        <div class="nav-right">
+            <div class="nav-link-container"><span>1. </span><a data-value="ABOUT" href="./about.html">ABOUT</a></div>
+            <div class="nav-link-container"><span>2. </span><a data-value="PORTFOLIO" href="./portfolio.html">PORTFOLIO</a></div>
+            <div class="nav-link-container"><span>3. </span><a data-value="CASE STUDY" href="./CASE-STUDY.html">CASE STUDY</a></div>
+            <div class="nav-link-container"><span>4. </span><a data-value="PRICING" href="./pricing.html">PRICING</a></div>
+            <div class="nav-link-container"><span>5. </span><a data-value="CONTACT" href="./contact.html">CONTACT</a></div>
+        </div>
+    </nav>
+    <h1>Contact Me</h1>
+    <section>
+        <div class="wrapper">
+            <div class="form-container box-shadow">
+                <h2>fill this out and I'll get in contact with you...</h2>
+                <form id="contactForm">
+                    
+                    <div class="form-group">
+                        <p>hello, my name is&nbsp;</p>
+                        <div class="input-wrapper">
+                            <input style="width: 5.8vw;" type="text" id="name" name="name" placeholder="jordan netz" required>
+                            <div class="input-underline"></div>
+                        </div>
+                        <p>&nbsp;and my email is&nbsp;</p>
+                        <div class="input-wrapper">
+                            <input style="width: 8.8vw;" type="email" id="email" name="email" placeholder="your@email.com" required>
+                            <div class="input-underline"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p>im interested in a&nbsp;</p>
+                        <div class="input-wrapper">
+                            <input style="width: 6.6vw;" type="text" id="interest" name="interest" placeholder="cool website" required>
+                            <div class="input-underline"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p>"dear jordan,&nbsp;</p>
+                        <div class="input-wrapper">
+                            <input style="width: 13.3vw;" type="text" id="message" name="message" placeholder="lets chat about my dogs..." required>
+                            <div class="input-underline"></div>
+                        </div>
+                        <p>"</p>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit"><div class="primary-button">Send Information!</div></button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-link-container"><a href="./index.html" style="color: white;">HOME</a></div>
+                <div class="footer-link-container"><a href="./about.html" style="color: white;">ABOUT</a></div>
+                <div class="footer-link-container"><a href="./portfolio.html" style="color: white;">PORTFOLIO</a></div>
+                <div class="footer-link-container"><a href="./CASE-STUDY.html" style="color: white;">CASE STUDY</a></div>
+                <div class="footer-link-container"><a href="./pricing.html" style="color: white;">PRICING</a></div>
+                <div class="footer-link-container"><a href="./contact.html" style="color: white;">CONTACT</a></div>
+            </div>
+            <div class="footer-note">
+                &copy; 2024 Jordan Netz. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        var button = event.target.querySelector('button .primary-button');
+        button.textContent = 'Thanks!'; // Change the button text to 'Thanks!'
+        
+        // Clear all input fields and textareas
+        var inputs = event.target.querySelectorAll('input, textarea');
+        inputs.forEach(function(input) {
+            input.value = ''; // Clear the input/textarea value
+        });
+    });
+    </script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

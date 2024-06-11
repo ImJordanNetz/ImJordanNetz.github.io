@@ -23,7 +23,7 @@ document.querySelectorAll(".nav-link-container a").forEach(anchor => {
                 clearInterval(interval);
             }
             
-            iteration += 1 / 3;
+            iteration += 1 / 4;
         }, 40);
     };
 });

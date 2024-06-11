@@ -3,9 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pricing</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/oii0kjc.css">
+    <style>
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        section {
+            margin: 0 15vw;
+            
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 1.4vw;
+            font-family: "new-science", sans-serif;
+            margin: 0;
+        }
+
+        .pricing-cards {
+            display: flex;
+            justify-content: center;
+            gap: 4vw;
+        }
+
+        
+
+    </style>
 </head>
 <body>
+    <div id="trailer"></div>
+    <nav>
+        <div class="nav-left">
+            <div class="nav-link-container"><a data-value="JORDAN NETZ | HOME" href="./index.html">JORDAN NETZ</a></div>
+        </div>
+        <div class="nav-right">
+            <div class="nav-link-container"><span>1. </span><a data-value="ABOUT" href="./about.html">ABOUT</a></div>
+            <div class="nav-link-container"><span>2. </span><a data-value="PORTFOLIO" href="./portfolio.html">PORTFOLIO</a></div>
+            <div class="nav-link-container"><span>3. </span><a data-value="CASE STUDY" href="./CASE-STUDY.html">CASE STUDY</a></div>
+            <div class="nav-link-container"><span>4. </span><a data-value="PRICING" href="./pricing.html">PRICING</a></div>
+            <div class="nav-link-container"><span>5. </span><a data-value="CONTACT" href="./contact.html">CONTACT</a></div>
+        </div>
+    </nav>
+    <h1>Pricing</h1>
+    <section>
+        <h2>Pick what option feels best for you and your needs.</h2>
+
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <span style="display: flex; justify-content: center;"><h3>BASIC</h3></span>
+                <ul>
+                    <li>A well-designed home page</li>
+                    <li>Custom Animations</li>
+                    <li>Personalized Touch</li>
+                    <li>Basic SEO</li>
+                    <li>Email Support</li>
+                </ul>
+                <span style="display: flex; justify-content: center;"><h3>$100</h3></span>
+                <span style="display: flex; justify-content: center; margin-top: 3vh; font-size: 0.7vw;"><div class="primary-button">Contact Me</div></span>
+            </div>
     
+            <div class="pricing-card">
+                <span style="display: flex; justify-content: center;"><h3>STANDARD</h3></span>
+                <ul>
+                    <li>All Basic Plan Features</li>
+                    <li>Up to 5 Additional Pages</li>
+                    <li>Advanced SEO</li>
+                    <li>Responsive Design</li>
+                    <li>Monthly Analytics Reports</li>
+                </ul>
+                <span style="display: flex; justify-content: center;"><h3>$300</h3></span>
+                <span style="display: flex; justify-content: center; margin-top: 3vh; font-size: 0.7vw;"><div class="primary-button">Contact Me</div></span>
+            </div>
+    
+            <div class="pricing-card">
+                <span style="display: flex; justify-content: center;"><h3>PREMIUM</h3></span>
+                <ul>
+                    <li>All Standard Plan Features</li>
+                    <li>E-commerce Integration</li>
+                    <li>24/7 Priority Support</li>
+                    <li>Custom Branding</li>
+                    <li>Advanced Security Features</li>
+                </ul>
+                <span style="display: flex; justify-content: center;"><h3>$600</h3></span>
+                <span style="display: flex; justify-content: center; margin-top: 3vh; font-size: 0.7vw;"><div class="primary-button">Contact Me</div></span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-link-container"><a href="./index.html" style="color: white;">HOME</a></div>
+                <div class="footer-link-container"><a href="./about.html" style="color: white;">ABOUT</a></div>
+                <div class="footer-link-container"><a href="./portfolio.html" style="color: white;">PORTFOLIO</a></div>
+                <div class="footer-link-container"><a href="./CASE-STUDY.html" style="color: white;">CASE STUDY</a></div>
+                <div class="footer-link-container"><a href="./pricing.html" style="color: white;">PRICING</a></div>
+                <div class="footer-link-container"><a href="./contact.html" style="color: white;">CONTACT</a></div>
+            </div>
+            <div class="footer-note">
+                &copy; 2024 Jordan Netz. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
 </body>
 </html>

@@ -3,9 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/oii0kjc.css">
+    <style>
+        .image-div {
+            background-position: center;
+            background-size: 120%;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 4vw;
+            font-family: "new-science", sans-serif;
+            margin: 0;
+        }
+
+        h3 {
+            font-weight: 300;
+            margin: 0;
+            font-size: 1.5vw;
+        }
+
+        .acronym {
+            font-size: 2.5vw;
+            font-weight: 600;
+        }
+
+        section {
+            margin: 0 15vw;
+        }
+
+        .half-n-half{
+            display: grid;
+            grid-template-columns: 35% 65%;
+        }
+
+        .half-n-half p {
+            font-size: 1.3vw;
+        }
+        #landing {
+            margin-bottom: 7vh;
+        }
+        #landing .left{
+            position: relative;
+        }
+
+
+        #landing .left p {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .image-div-container {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .image-subtext {
+            font-family: "new-science", sans-serif;
+            
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image-subtext p {
+            font-size: 0.8vw;
+            margin: 1vh 0;
+        }
+
+    </style>
 </head>
 <body>
-    
+    <div id="trailer"></div>
+    <nav>
+        <div class="nav-left">
+            <div class="nav-link-container"><a data-value="JORDAN NETZ | HOME" href="./index.html">JORDAN NETZ</a></div>
+        </div>
+        <div class="nav-right">
+            <div class="nav-link-container"><span>1. </span><a data-value="ABOUT" href="./about.html">ABOUT</a></div>
+            <div class="nav-link-container"><span>2. </span><a data-value="PORTFOLIO" href="./portfolio.html">PORTFOLIO</a></div>
+            <div class="nav-link-container"><span>3. </span><a data-value="CASE STUDY" href="./CASE-STUDY.html">CASE STUDY</a></div>
+            <div class="nav-link-container"><span>4. </span><a data-value="PRICING" href="./pricing.html">PRICING</a></div>
+            <div class="nav-link-container"><span>5. </span><a data-value="CONTACT" href="./contact.html">CONTACT</a></div>
+        </div>
+    </nav>
+    <h1>About Me</h1>
+    <section>
+        <div class="half-n-half" id="landing">
+            <div class="left">
+                <h2>The Basics</h2>
+                <p>Hi there. I'm Jordan. I'm a soon-to-be College Freshman at the <span style="color: var(--blue);">University of California, Irvine</span> for <span style="color: var(--red);">Computer Science</span>, and for as long as I've had a computer, I have loved to code.</p>
+            </div>
+
+            <div class="right">
+                <div class="image-div-container" style="width: 50%; margin-left: auto">
+                    <div class="image-div" style="background-image: url(./images/fullbody.png); width: 100%; aspect-ratio: 3/4;"></div>
+                    <div class="image-subtext">
+                        <p>Photo By Anatoly Guz</p>
+                        <p>2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="image-div-container">
+            <div class="image-div" style="background-image: url(./images/brothers.jpg); width: 100%; aspect-ratio: 16/9; background-position: top;"></div>
+            <div class="image-subtext">
+                <p>Photo By My Mom</p>
+                <p>2023</p>
+            </div>
+        </div>
+    </section>
+
+    <div style="width: 100%; background-color: var(--red); color: white; padding: 3vh 0; margin: 7vh 0;">
+        <section>
+            <h2>But who is the deeper me??</h2>
+            <p>fun fact: jordan is actually an acronym for who I am!</p>
+            
+            <h3><span class="acronym">J</span>ust a nice guy</h3>
+            <h3><span class="acronym">O</span>n the grindset</h3>
+            <h3><span class="acronym">R</span>izzing up las baddies</h3>
+            <h3><span class="acronym">D</span>oing great :)</h3>
+            <h3><span class="acronym">A</span>+ is what I will be getting on this project *cough* Mr. Clarke *cough*</h3>
+            <h3><span class="acronym">N</span>o BS</h3>
+        </section>
+    </div>
+
+    <section>
+        <h2>Not to mention: A Social Butterfly</h2>
+        <div class="image-collage" style="position: relative; height: 80vh;">
+            <div class="image-div" style="background-image: url(./images/alex.jpg); width: 20%; aspect-ratio: 1/2; position: absolute; top: 5%; left: 40%;"></div>
+            <div class="image-div" style="background-image: url(./images/promOE.jpg); width: 50%; background-size: 100%; background-position: top; aspect-ratio: 16/9; position: absolute; top: 45%; z-index: -1; left: 0;"></div>
+            <div class="image-div" style="background-image: url(./images/isobel.jpg); width: 35%; aspect-ratio: 6/5; position: absolute; top: 35%; right: 10%;"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-link-container"><a href="./index.html" style="color: white;">HOME</a></div>
+                <div class="footer-link-container"><a href="./about.html" style="color: white;">ABOUT</a></div>
+                <div class="footer-link-container"><a href="./portfolio.html" style="color: white;">PORTFOLIO</a></div>
+                <div class="footer-link-container"><a href="./CASE-STUDY.html" style="color: white;">CASE STUDY</a></div>
+                <div class="footer-link-container"><a href="./pricing.html" style="color: white;">PRICING</a></div>
+                <div class="footer-link-container"><a href="./contact.html" style="color: white;">CONTACT</a></div>
+            </div>
+            
+            <div class="footer-note">
+                &copy; 2024 Jordan Netz. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
 </body>
 </html>
